@@ -10,7 +10,7 @@ int main(void)
     int pop_i = populacao_inicial();
     int pop_f = populacao_final(pop_i);
     int anos = calculo(pop_i, pop_f);
-    printf("Aninhos: %i\n", anos);
+    printf("Years: %i", anos);
 }
 
 int populacao_inicial(void)
