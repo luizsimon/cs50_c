@@ -10,5 +10,5 @@ int main(void)
     i = i + i/3 - i/4;
     y++;
   }
-  printf("Years: %i\n", y);
+  printf("Aninhos: %i\n", y);
 }
