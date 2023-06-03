@@ -26,7 +26,7 @@ int populacao_inicial(void)
 int populacao_final(void)
 {
     int pop_f;
-    int pop_i = populacao_inicial();
+    int pop_i;
     do
     {
         pop_f = get_int("Qual o tamanho da população final? ");
