@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int populacao_inicial(void);
-int populacao_final(void);
+int populacao_final(int pop_i);
 
 int main(void)
 {
     int pop_i = populacao_inicial();
-    int pop_f = populacao_final();
+    int pop_f = populacao_final(pop_i);
     //printf("%i", pop_i);
     printf("%i", pop_f);
 }
@@ -23,20 +23,19 @@ int populacao_inicial(void)
     return pop_i;
 }
 
-int populacao_final(void)
+int populacao_final(int pop_i)
 {
     int pop_f;
     do
     {
         pop_f = get_int("Qual o tamanho da população final? ");
     }
-    while (pop_f > 9);
+    while (pop_f < pop_i);
     return pop_f;
 }
 
+int calculo (int pop_i, int pop_f)
+{
+    
+}
 
-    // int i = 100;
-    //  int f = 200;
-    //  int y = 0;
-    //  for (int i = 100; i < f; i = i + i/3 - i/4; y++)
-    //  printf("Aninhos: %i\n", y);
