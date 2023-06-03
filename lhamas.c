@@ -13,7 +13,7 @@ int populacao_inicial(void)
     int pop_i;
     do
   {
-    pop_i = get_int("Qual o tamanho da população inicial? ");
+        pop_i = get_int("Qual o tamanho da população inicial? ");
   }
     while (pop_i < 9);
 }
