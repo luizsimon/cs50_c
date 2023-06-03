@@ -3,11 +3,12 @@
 
 int main(void)
 {
-  do
+    int populacao_inicial;
+    do
   {
-    int populacao_inicial = get_int("Qual o tamanho da população inicial? ");
+    populacao_inicial = get_int("Qual o tamanho da população inicial? ");
   }
-    while (populacao_inicial < 9)
+    while (populacao_inicial < 9);
 }
 
 
