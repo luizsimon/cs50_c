@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int populacao_inicial(void);
-int populacao_final(int);
+int populacao_final(int pop_i);
 
 int main(void)
 {
     int pop_i = populacao_inicial();
-    int pop_f = populacao_final();
+    int pop_f = populacao_final(pop_i);
     //printf("%i", pop_i);
     printf("%i", pop_f);
 }
@@ -30,7 +30,7 @@ int populacao_final(int pop_i)
     {
         pop_f = get_int("Qual o tamanho da população final? ");
     }
-    while (pop_f < pop_i);
+    while (pop_f > pop_i);
     return pop_f;
 }
 
