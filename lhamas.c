@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 int populacao_inicial(void);
-int populacao_final(int pop_i);
+int populacao_final(void);
 
 int main(void)
 {
     int pop_i = populacao_inicial();
-    int pop_f = populacao_final(pop_i);
+    int pop_f = populacao_final();
     //printf("%i", pop_i);
     printf("%i", pop_f);
 }
@@ -23,7 +23,7 @@ int populacao_inicial(void)
     return pop_i;
 }
 
-int populacao_final(int pop_i)
+int populacao_final(void)
 {
     int pop_f;
     do
