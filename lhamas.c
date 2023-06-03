@@ -3,13 +3,16 @@
 
 int populacao_inicial(void);
 int populacao_final(int pop_i);
+int calculo (int pop_i, int pop_f);
 
 int main(void)
 {
     int pop_i = populacao_inicial();
     int pop_f = populacao_final(pop_i);
+    int anos = calculo(pop_i, pop_f);
     //printf("%i", pop_i);
     printf("%i", pop_f);
+    printf("%i", anos);
 }
 
 int populacao_inicial(void)
@@ -36,6 +39,7 @@ int populacao_final(int pop_i)
 
 int calculo (int pop_i, int pop_f)
 {
-    
+   int anos = pop_i + pop_i/3 - pop_i/4;
+   return anos;
 }
 
