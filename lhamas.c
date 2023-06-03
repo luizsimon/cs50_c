@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int populacao_inicial(void);
-int populacao_final(pop_i);
+int populacao_final(void);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int populacao_inicial(void)
     return pop_i;
 }
 
-int populacao_final(pop_i)
+int populacao_final(void)
 {
     int pop_f;
     int pop_i;
