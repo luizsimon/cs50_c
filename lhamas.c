@@ -30,7 +30,7 @@ int populacao_final(int pop_i)
     {
         pop_f = get_int("Qual o tamanho da população final? ");
     }
-    while (pop_f > pop_i);
+    while (pop_f > 9);
     return pop_f;
 }
 
