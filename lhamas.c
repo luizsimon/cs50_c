@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int populacao_inicial(void);
-//int populacao_final(void);
+int populacao_final(void);
 
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 
 int populacao_inicial(void)
 {
-    int pop_i
+    int pop_i;
     do
     {
         pop_i = get_int("Qual o tamanho da população inicial? ");
@@ -21,7 +21,17 @@ int populacao_inicial(void)
     return pop_i;
 }
 
-//int populacao_final(void)
+int populacao_final(void)
+{
+    int pop_f
+    do
+    {
+        pop_f = get_int("Qual o tamanho da população final? ");
+    }
+    while (pop_f < 9);
+    return pop_f;
+}
+
 
     // int i = 100;
     //  int f = 200;
