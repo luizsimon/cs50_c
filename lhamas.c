@@ -7,7 +7,9 @@ int populacao_final(void);
 int main(void)
 {
     int pop_i = populacao_inicial();
+    int pop_f = populacao_final();
     printf("%i", pop_i);
+    printf("%i", pop_f);
 }
 
 int populacao_inicial(void)
@@ -24,6 +26,7 @@ int populacao_inicial(void)
 int populacao_final(void)
 {
     int pop_f;
+    int pop_i = populacao_inicial();
     do
     {
         pop_f = get_int("Qual o tamanho da população final? ");
