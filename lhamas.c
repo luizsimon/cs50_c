@@ -8,7 +8,7 @@ int main(void)
 {
     int pop_i = populacao_inicial();
     int pop_f = populacao_final();
-   // printf("%i", pop_i);
+    //printf("%i", pop_i);
     printf("%i", pop_f);
 }
 
