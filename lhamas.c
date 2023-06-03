@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int populacao_inicial(pop_i);
+
 int main(void)
 {
-    int populacao_inicial;
-    do
-  {
-    populacao_inicial = get_int("Qual o tamanho da população inicial? ");
-  }
-    while (populacao_inicial < 9);
+    int pop_i = populacao_inicial();
 }
 
-
+int populacao_inicial(pop_i)
+{
+    int pop_i;
+    do
+  {
+    pop_i = get_int("Qual o tamanho da população inicial? ");
+  }
+    while (pop_i < 9);
+}
 
 
 
