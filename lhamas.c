@@ -23,12 +23,12 @@ int populacao_inicial(void)
 
 int populacao_final(void)
 {
-    int pop_f
+    int pop_f;
     do
     {
         pop_f = get_int("Qual o tamanho da população final? ");
     }
-    while (pop_f < 9);
+    while (pop_f < pop_i);
     return pop_f;
 }
 
