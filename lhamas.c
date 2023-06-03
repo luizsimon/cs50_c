@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int populacao_inicial(pop_i);
+int populacao_inicial(void);
 
 int main(void)
 {
     int pop_i = populacao_inicial();
 }
 
-int populacao_inicial(pop_i)
+int populacao_inicial(void)
 {
     int pop_i;
     do
