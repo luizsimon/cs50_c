@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <cs50.i>
 
 int main(void)
 {
@@ -9,8 +9,5 @@ int main(void)
     for (int i = 100; i < f; i = i + i/3 - i/4; y++)
   printf("Aninhos: %i\n", y);
 }
- //  while (i < f)
-//  {
-  //  i = i + i/3 - i/4;
-  //  y++;
-//  }
+
+
