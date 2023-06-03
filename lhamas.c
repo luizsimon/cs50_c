@@ -3,7 +3,7 @@
 
 int populacao_inicial(void);
 int populacao_final(int pop_i);
-int calculo (int pop_i, int pop_f);
+int calculo(int pop_i, int pop_f);
 
 int main(void)
 {
@@ -35,13 +35,13 @@ int populacao_final(int pop_i)
     return pop_f;
 }
 
-int calculo (int pop_i, int pop_f)
+int calculo(int pop_i, int pop_f)
 {
-   int anos = 0;
-   while (pop_i < pop_f)
-   {
-        pop_i = pop_i + pop_i/3 - pop_i/4;
+    int anos = 0;
+    while (pop_i < pop_f)
+    {
+        pop_i = pop_i + pop_i / 3 - pop_i / 4;
         anos++;
-   }
-   return anos;
+    }
+    return anos;
 }
