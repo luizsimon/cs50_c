@@ -13,15 +13,19 @@ int main(void)
 int populacao_inicial(void)
 {
     int pop_i;
-    do
-  {
-        pop_i = get_int("Qual o tamanho da população inicial? ");
-  }
-    while (pop_i < 9);
-    return pop_i;
+    pop_i = get_int("Qual o tamanho da população inicial? ");
+    for(pop_i; pop_i<9)
+
+
+ //   do
+//  {
+ //       pop_i = get_int("Qual o tamanho da população inicial? ");
+ // }
+  //  while (pop_i < 9);
+  //  return pop_i;
 }
 
-int popua
+int populacao_final(void)
 
 
 
