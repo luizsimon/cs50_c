@@ -26,10 +26,11 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        int prime, j;
         do
-            prime = prime + (i % j);
+        {
+           int prime = prime + (i % j);
             j++;
+        }
 
         while (j < i);
 
