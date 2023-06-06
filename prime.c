@@ -11,9 +11,10 @@ int main(void)
     int i = get_int("inicial: ");
     int f = get_int("final: ");
     IsPrime(i, f);
+    
 }
 
-void IsPrime(int initial_number, int final_number)
+bool IsPrime(int initial_number, int final_number)
 {
     // if (initial_number == 1)
     //{
@@ -35,9 +36,13 @@ void IsPrime(int initial_number, int final_number)
 
             if (prime == 0)
             {
-                printf("%i - nao é prime", i);
+                return true;
             }
-        
+            else
+            {
+                return false;
+            }
+
         }
             //printf("%i - é prime\n", i);
 
