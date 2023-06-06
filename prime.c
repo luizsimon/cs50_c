@@ -29,7 +29,7 @@ void IsPrime(int initial_number, int final_number)
     {
         for (int j = 2; j < i; j++)
         {
-            
+
             int prime = (i % j);
             soma = soma + prime;
 
