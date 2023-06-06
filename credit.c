@@ -69,7 +69,7 @@ void validacao(long numero, int quantidade_digitos)
     }
     else
     {
-        printf("\nINVALID\n\n");
+        printf("INVALID\n");
     }
 }
 
