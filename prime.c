@@ -21,7 +21,7 @@ void IsPrime(int initial_number, int final_number)
        int prime;
        while (j < i)
        {
-            prime = prime + (i % j);
+            prime = (i % j);
             j++;
 
             if ((prime != 0))
