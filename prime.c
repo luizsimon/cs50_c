@@ -24,7 +24,11 @@ void IsPrime(int initial_number, int final_number)
             prime = prime + (i % j);
             j++;
        }
-
+       if ((prime =! 0))
+       {
+            printf("%i", i);
+       }
+       else
         //int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
         //if (prime =! 0 )
 
