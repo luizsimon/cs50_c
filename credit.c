@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 long numero(void);
 void validacao(long numero, int quantidade_digitos);
@@ -23,7 +23,7 @@ long numero(void)
 // funcao para validar o numero do cartao
 void validacao(long numero, int quantidade_digitos)
 {
-    //separar os numeros
+    // separar os numeros
     long n = numero;
 
     int i = 0;
@@ -33,7 +33,7 @@ void validacao(long numero, int quantidade_digitos)
 
     int digitos_cartao = 0;
     long x = 100;
-    long y = 10; //para pegar os outros numeros que foram descartados long int y = 10;
+    long y = 10; // para pegar os outros numeros que foram descartados long int y = 10;
 
     if (quantidade_digitos < 2)
     {
@@ -41,9 +41,9 @@ void validacao(long numero, int quantidade_digitos)
     }
     else
     {
-        long e = pow(10, (quantidade_digitos-2)); //funcao pow faz o exponente (base, expoente)
-        int dois_digitos_iniciais = (n - (n % e))/e;
-        int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10))/10;
+        long e = pow(10, (quantidade_digitos - 2)); // funcao pow faz o exponente (base, expoente)
+        int dois_digitos_iniciais = (n - (n % e)) / e;
+        int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10)) / 10;
         while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
         {
             int digitos_multiplicados = (n % x) / (x / 10);
@@ -52,42 +52,32 @@ void validacao(long numero, int quantidade_digitos)
             int demais_digitos = (n % y) / (y / 10);
             y = y * 100;
             i++;
-            int soma = 2*digitos_multiplicados;
-            soma_digitos_multiplicados = (soma % 100)/10 + (soma % 10); //soma dos digitos apos multiplicacao por 2
-            soma_demais_digitos = (demais_digitos % 10); //soma dos digitos que nao foram multiplicados por 2
+            int soma = 2 * digitos_multiplicados;
+            soma_digitos_multiplicados = (soma % 100) / 10 + (soma % 10); // soma dos digitos apos multiplicacao por 2
+            soma_demais_digitos = (demais_digitos % 10);                  // soma dos digitos que nao foram multiplicados por 2
             soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados;
         }
 
-            if (soma_total % 10 == 0)
+        if (soma_total % 10 == 0)
+        {
+            if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
             {
-                printf("\nVÁLIDO\n");
-
-    //Se comeca em 51, 52, 53, 54 ou 55 e tem 16 digitos é MASTER
-    //Se comeca em 34 ou 37 e tem 15 digitos é AMERICAN EXPRESS
-    //Se comeca em 4 e ten 13-16 digitos é VISA
-    //Multiplique cada segundo digito por 2, começando com o penúltimo dígito do número e, em seguida, some os dígitos desses produtos.
-    //Adicione essa soma à soma dos dígitos que não foram multiplicados por 2.
-    //Se o último dígito do total for 0 (ou, mais formalmente, se o módulo total 10 for congruente com 0), o número é válido!
-
-                if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
-                {
-                    printf("MASTERCARD\n");
-                }
-                else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
-                {
-                    printf("AMEX\n");
-                }
-                else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
-                {
-                    printf("VISA\n");
-                }
+                printf("MASTERCARD\n");
             }
-            else
+            else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
             {
-                printf("\nINVÁLIDO\n");
-
+                printf("AMEX\n");
             }
-}
+            else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
+            {
+                printf("VISA\n");
+            }
+        }
+        else
+        {
+            printf("\nINVÁLIDO\n");
+        }
+    }
 }
 
 int quantidade_digitos(long numero)
@@ -105,5 +95,3 @@ int quantidade_digitos(long numero)
     }
     return quantidade_digitos;
 }
-
-
