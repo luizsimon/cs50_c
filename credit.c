@@ -43,6 +43,7 @@ void validacao(long numero, int quantidade_digitos)
     {
         long e = pow(10, (quantidade_digitos-2)); //funcao pow faz o exponente (base, expoente)
         int dois_digitos_iniciais = (n - (n % e))/e;
+        int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10))/10;
         while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
         {
             int digitos_multiplicados = (n % x) / (x / 10);
@@ -72,13 +73,13 @@ void validacao(long numero, int quantidade_digitos)
                 {
                     printf("MASTERCARD\n");
                 }
-                else if (dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37 && quantidade_digitos == 15)
+                else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
                 {
                     printf("AMEX\n");
                 }
-                else if ((dois_digitos_iniciais % 10 == 4))
+                else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
                 {
-                    print
+                    printf("VISA\n");
                 }
             }
             else
