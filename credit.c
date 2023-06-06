@@ -65,6 +65,10 @@ void validacao(long numero, int quantidade_digitos)
         {
             printf("\nVISA\n");
         }
+        else
+        {
+            printf("\nINVALID\n");
+        }
     }
     else
     {
