@@ -25,7 +25,6 @@ void validacao(long numero, int quantidade_digitos)
 {
     // separar os numeros
     long n = numero;
-
     int i = 0;
     int soma_demais_digitos = 0;
     int soma_digitos_multiplicados = 0;
@@ -34,8 +33,7 @@ void validacao(long numero, int quantidade_digitos)
     long y = 10;
     long e = pow(10, (quantidade_digitos - 2)); // funcao pow faz a exponenciacao (base, expoente)
     int dois_digitos_iniciais = (n - (n % e)) / e; // pega os 2 primeiros digitos
-    int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10)) / 10; // exclui o segundo digito, para validar os cartoes VISA
-
+    int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10)) / 10;
     while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
     {
         int digitos_multiplicados = (n % x) / (x / 10); //pega os digitos começando do penultimo pulando de 1 em 1
