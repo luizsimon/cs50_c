@@ -55,24 +55,24 @@ void validacao(long numero, int quantidade_digitos)
     {
         if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
         {
-            printf("\nMASTERCARD\n");
+            printf("\nMASTERCARD\n\n");
         }
         else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
         {
-            printf("\nAMEX\n");
+            printf("\nAMEX\n\n");
         }
         else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
         {
-            printf("\nVISA\n");
+            printf("\nVISA\n\n");
         }
         else
         {
-            printf("\nINVALID\n");
+            printf("\nINVALID\n\n");
         }
     }
     else
     {
-        printf("\nINVALID\n");
+        printf("\nINVALID\n\n");
     }
 }
 
