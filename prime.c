@@ -24,26 +24,17 @@ void IsPrime(int initial_number, int final_number)
     //     int j = initial_number - 1;
     // }
 
-    int i = initial_number;
-
-    while (i < final_number)
+    int prime = 0;
+    for (int i = initial_number; i < final_number; i++)
     {
-        int j = 1;
-        do
+        for (int j = 1; j < i; j++)
         {
-            int prime = (i % j);
-            j++;
-
-            if (prime == 0)
-            {
-                printf("\nI=%i\nJ=%i", i, j);
-            }
-
+            prime = prime + (i % j);
+            printf("%i", prime);
         }
-        while (j == i);
-        i++;
 
-       // printf("//");
+
+        // printf("//");
     }
 
     // int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
