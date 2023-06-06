@@ -39,14 +39,14 @@ void validacao(long numero, int quantidade_digitos)
     while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
     {
         int digitos_multiplicados = (n % x) / (x / 10); //pega os digitos começando do penultimo pulando de 1 em 1
-        x = x * 100; // varia o x no calculo do digitos_multiplicados
+        x = x * 100;
         int demais_digitos = (n % y) / (y / 10); //pega os outros digitos que nao foram pegos na digitos_multiplicados
         y = y * 100;
         i++;
-        int soma = 2 * digitos_multiplicados;
+        int soma = 2 * digitos_multiplicados; // faz o processo de multiplicar por 2 segundo o algoritmo de Luhn
         soma_digitos_multiplicados = (soma % 100) / 10 + (soma % 10); // soma dos digitos apos multiplicacao por 2
         soma_demais_digitos = (demais_digitos % 10);                  // soma dos digitos que nao foram multiplicados por 2
-        soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados;
+        soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados; // soma total para validacao
     }
 
     if (soma_total % 10 == 0)
