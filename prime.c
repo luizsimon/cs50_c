@@ -27,7 +27,7 @@ void IsPrime(int initial_number, int final_number)
     int soma = 0;
     for (int i = initial_number; i < final_number; i++)
     {
-        for (int j = 1; j < i; j++)
+        for (int j = 2; j < i; j++)
         {
             int prime = (i % j);
             soma = soma + prime;
