@@ -51,7 +51,7 @@ void IsPrime(int initial_number, int final_number)
             {
                 printf("\n%i - Prime", i);
                 //return false;
-                break;
+                //break;
             }
         }
         // printf("%i - é prime\n", i);
