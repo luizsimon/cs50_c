@@ -25,19 +25,27 @@ void IsPrime(int initial_number, int final_number)
     // }
 
     int soma = 0;
+    int prime = 0;
     for (int i = initial_number; i < final_number; i++)
     {
         for (int j = 2; j < i; j++)
         {
-            int prime = (i % j);
-            soma = soma + prime;
-
             if (prime == 0)
             {
-                printf("%i - nao é prime", i);
+                break;
+            }
+            else
+            {
+                int prime = (i % j);
+                soma = soma + prime;
+
+                if (prime == 0)
+                {
+                    printf("%i - nao é prime", i);
+                }
             }
         }
-            printf("%i - é prime\n", i);
+        printf("%i - é prime\n", i);
 
         // printf("//");
     }
