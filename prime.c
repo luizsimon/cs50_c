@@ -10,8 +10,15 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    IsPrime(i, f);
-    
+    if ((IsPrime(i, f) == false))
+    {
+        printf("- primo";)
+    }
+    else
+    {
+        printf("- no primo");
+    }
+
 }
 
 bool IsPrime(int initial_number, int final_number)
