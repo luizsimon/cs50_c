@@ -16,7 +16,7 @@ int main(void)
 // funcao pro usuario digitar o numero do cartao
 long numero(void)
 {
-    long numero = get_long("\nNumber: ");
+    long numero = get_long("Number: ");
     return numero;
 }
 
@@ -45,26 +45,26 @@ void validacao(long numero, int quantidade_digitos)
         int soma = 2 * digitos_multiplicados;
         soma_digitos_multiplicados = (soma % 100) / 10 + (soma % 10);
         soma_demais_digitos = (demais_digitos % 10);
-        soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados; 
+        soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados;
     }
 
     if (soma_total % 10 == 0)
     {
         if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
         {
-            printf("\nMASTERCARD\n\n");
+            printf("MASTERCARD\n");
         }
         else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
         {
-            printf("\nAMEX\n\n");
+            printf("AMEX\n");
         }
         else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
         {
-            printf("\nVISA\n\n");
+            printf("VISA\n");
         }
         else
         {
-            printf("\nINVALID\n\n");
+            printf("INVALID\n");
         }
     }
     else
