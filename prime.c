@@ -38,7 +38,7 @@ void IsPrime(int initial_number, int final_number)
             }
 
         }
-        while (j > i);
+        while (j < i);
 
         printf("//");
     }
