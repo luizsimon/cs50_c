@@ -10,7 +10,7 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    if (IsPrime(i, f) == false)
+    if (IsPrime(i, f))
     {
         printf("- primo");
     }
