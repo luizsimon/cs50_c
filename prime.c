@@ -31,11 +31,6 @@ void IsPrime(int initial_number, int final_number)
         {
             int prime = (i % j);
             j++;
-
-            if ((prime != 0))
-            {
-                printf("%i", i);
-            }
         }
         while (j >= i);
     }
