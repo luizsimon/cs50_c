@@ -17,6 +17,17 @@ void IsPrime(int initial_number, int final_number)
 {
     for (int i = initial_number; i < final_number; i++)
     {
+        if (i = 1)
+        {
+            int j = 1;
+        }
+        else
+        {
+            int j = i - 1;
+        }
+
+        int prime = 
+
        int j = i - 1;
        int prime;
        while (j < i)
