@@ -2,13 +2,18 @@
 #include <stdbool.h>
 #include <cs50.h>
 
+void IsPrime(int initial_number, int final_number);
+
 int main(void)
 {
     //IsPrime
     //GetNumbers
+    int i = get_int("inicial: ");
+    int f = get_int("final: ");
+    IsPrime(i, f);
 }
 
-bool IsPrime(int initial_number, int final_number)
+void IsPrime(int initial_number, int final_number)
 {
     for (int i = initial_number; i < final_number; i++)
     {
