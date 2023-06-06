@@ -24,7 +24,9 @@ void IsPrime(int initial_number, int final_number)
     //     int j = initial_number - 1;
     // }
 
-    for (int i = initial_number; i < final_number; i++)
+    int i = initial_number;
+
+    while (i < final_number)
     {
         int j = 1;
         do
@@ -38,7 +40,8 @@ void IsPrime(int initial_number, int final_number)
             }
 
         }
-        while (j < i);
+        while (j == i);
+        i++;
 
        // printf("//");
     }
