@@ -31,11 +31,11 @@ void IsPrime(int initial_number, int final_number)
         {
             int prime = (i % j);
             soma = soma + prime;
+
             if (prime == 0)
             {
                 printf("%i - nao é prime", i);
             }
-            else
         }
             printf("%i\n", soma);
 
