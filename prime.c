@@ -26,20 +26,19 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-
+        int j = 1;
+        int prime = 0;
         do
         {
-            int j = 1;
             int prime = prime + (i % j);
             j++;
-        }
 
-        while (int j >= int i);
-
-        if ((prime != 0))
-        {
-            printf("%i", i);
+            if ((prime != 0))
+            {
+                printf("%i", i);
+            }
         }
+        while (j >= i);
     }
 
     // int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
