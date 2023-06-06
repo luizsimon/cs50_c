@@ -38,12 +38,10 @@ int IsPrime(int initial_number, int final_number)
         {
 
             int prime = (i % j);
-            soma = soma + prime;
 
             if (prime == 0)
             {
-                return true
-                ;
+                return true;
             }
             else
             {
