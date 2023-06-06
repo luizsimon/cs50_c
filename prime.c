@@ -36,7 +36,7 @@ void IsPrime(int initial_number, int final_number)
             }
             else
             {
-                int prime = (i % j);
+                prime = (i % j);
                 soma = soma + prime;
 
                 if (prime == 0)
