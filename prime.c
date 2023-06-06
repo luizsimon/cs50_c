@@ -17,10 +17,13 @@ void IsPrime(int initial_number, int final_number)
 {
     for (int i = initial_number; i < final_number; i++)
     {
-        for (int j = i - 1; j > 1; j--)
-        {
-            int prime = (i % j);
-        }
+       int j = i - 1;
+       int prime;
+       while (j < i)
+       {
+            prime = prime + (i % j);
+            j++;
+       }
 
         //int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
         //if (prime =! 0 )
