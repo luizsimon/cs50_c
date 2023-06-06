@@ -30,9 +30,8 @@ void IsPrime(int initial_number, int final_number)
         for (int j = 1; j < i; j++)
         {
             prime = prime + (i % j);
-            printf("%i", prime);
         }
-
+            printf("%i", prime);
 
         // printf("//");
     }
