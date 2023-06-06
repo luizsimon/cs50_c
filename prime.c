@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include <cs50.h>
 
 int main(void)
@@ -9,5 +10,5 @@ int main(void)
 
 bool IsPrime(int initial_number, int final_number)
 {
-
+    for
 }
