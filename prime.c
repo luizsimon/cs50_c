@@ -34,7 +34,7 @@ void IsPrime(int initial_number, int final_number)
 
             if (prime == 0)
             {
-                printf("I=%i\nJ=%i", i, j);
+                printf("\nI=%i\nJ=%i", i, j);
             }
 
         }
