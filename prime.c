@@ -21,7 +21,7 @@ int main(void)
      }
 }
 
-void IsPrime(int initial_number, int final_number)
+bool IsPrime(int initial_number, int final_number)
 {
     // if (initial_number == 1)
     //{
