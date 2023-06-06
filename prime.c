@@ -39,7 +39,7 @@ void IsPrime(int initial_number, int final_number)
             }
             int prime = prime + (i % j);
             j++;
-        
+        }
 
         while (j < i);
 
