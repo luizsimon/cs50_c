@@ -16,7 +16,7 @@ int main(void)
 // funcao pro usuario diginar o numero do cartao
 long numero(void)
 {
-    long numero = get_long("Fala o numero do cartao ai o Zé: ");
+    long numero = get_long("Number: ");
     return numero;
 }
 
