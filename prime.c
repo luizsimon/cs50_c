@@ -42,18 +42,18 @@ int IsPrime(int initial_number, int final_number)
 
             if (prime == 0)
             {
-                return 1;
+                return true;
             }
             else
             {
-                return 0;
+                return false;
             }
         }
         // printf("%i - é prime\n", i);
 
         // printf("//");
     }
-    
     // int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
     // if (prime =! 0 )
+    return true;
 }
