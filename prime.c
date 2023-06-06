@@ -29,12 +29,12 @@ void IsPrime(int initial_number, int final_number)
 
         do
         {
-            int j = 1
+            int j = 1;
             int prime = prime + (i % j);
             j++;
         }
 
-        while (j >= i);
+        while (int j >= int i);
 
         if ((prime != 0))
         {
