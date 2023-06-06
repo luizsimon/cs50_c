@@ -34,49 +34,41 @@ void validacao(long numero, int quantidade_digitos)
     int digitos_cartao = 0;
     long x = 100;
     long y = 10; // para pegar os outros numeros que foram descartados long int y = 10;
-
-    if (quantidade_digitos < 2)
+    long e = pow(10, (quantidade_digitos - 2)); // funcao pow faz o exponente (base, expoente)
+    int dois_digitos_iniciais = (n - (n % e)) / e;
+    int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10)) / 10;
+    while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
     {
-        printf("INVALID");
+        int digitos_multiplicados = (n % x) / (x / 10);
+        x = x * 100;
+        digitos_cartao = digitos_cartao + digitos_multiplicados;
+        int demais_digitos = (n % y) / (y / 10);
+        y = y * 100;
+        i++;
+        int soma = 2 * digitos_multiplicados;
+        soma_digitos_multiplicados = (soma % 100) / 10 + (soma % 10); // soma dos digitos apos multiplicacao por 2
+        soma_demais_digitos = (demais_digitos % 10);                  // soma dos digitos que nao foram multiplicados por 2
+        soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados;
+    }
+
+    if (soma_total % 10 == 0)
+    {
+        if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
+        {
+            printf("\nMASTERCARD\n");
+        }
+        else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
+        {
+            printf("\nAMEX\n");
+        }
+        else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
+        {
+            printf("\nVISA\n");
+        }
     }
     else
     {
-        long e = pow(10, (quantidade_digitos - 2)); // funcao pow faz o exponente (base, expoente)
-        int dois_digitos_iniciais = (n - (n % e)) / e;
-        int primeiro_digito_inicial = (dois_digitos_iniciais - (dois_digitos_iniciais % 10)) / 10;
-        while (i < 8) // é < 8 pq o máximo de um cartão é 16 digitos
-        {
-            int digitos_multiplicados = (n % x) / (x / 10);
-            x = x * 100;
-            digitos_cartao = digitos_cartao + digitos_multiplicados;
-            int demais_digitos = (n % y) / (y / 10);
-            y = y * 100;
-            i++;
-            int soma = 2 * digitos_multiplicados;
-            soma_digitos_multiplicados = (soma % 100) / 10 + (soma % 10); // soma dos digitos apos multiplicacao por 2
-            soma_demais_digitos = (demais_digitos % 10);                  // soma dos digitos que nao foram multiplicados por 2
-            soma_total = soma_total + soma_demais_digitos + soma_digitos_multiplicados;
-        }
-
-        if (soma_total % 10 == 0)
-        {
-            if (dois_digitos_iniciais >= 51 && dois_digitos_iniciais <= 55 && quantidade_digitos == 16)
-            {
-                printf("\nMASTERCARD\n");
-            }
-            else if ((dois_digitos_iniciais == 34 || dois_digitos_iniciais == 37) && quantidade_digitos == 15)
-            {
-                printf("\nAMEX\n");
-            }
-            else if (primeiro_digito_inicial == 4 && (quantidade_digitos >= 13 && quantidade_digitos <= 16))
-            {
-                printf("\nVISA\n");
-            }
-        }
-        else
-        {
-            printf("\nINVALID\n");
-        }
+        printf("\nINVALID\n");
     }
 }
 
