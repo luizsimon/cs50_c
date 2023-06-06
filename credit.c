@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 long numero(void);
-void validacao(long numero, int quantidade_digitos);
+void validacao(long numero, int quantidade_digitos)
 int quantidade_digitos(long numero);
 
 int main(void)
