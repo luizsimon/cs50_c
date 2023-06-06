@@ -13,14 +13,14 @@ int main(void)
     validacao(n, q);
 }
 
-// funcao pro usuario diginar o numero do cartao
+// funcao pro usuario digitar o numero do cartao
 long numero(void)
 {
     long numero = get_long("\nNumber: ");
     return numero;
 }
 
-// funcao para validar o numero do cartao
+// funcao para validar o numero do cartao e definir a bandeira
 void validacao(long numero, int quantidade_digitos)
 {
     // separar os numeros
@@ -76,6 +76,7 @@ void validacao(long numero, int quantidade_digitos)
     }
 }
 
+//funcao para contar quantos digitos o usuario escreveu
 int quantidade_digitos(long numero)
 {
     long n = numero;
