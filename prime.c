@@ -10,5 +10,8 @@ int main(void)
 
 bool IsPrime(int initial_number, int final_number)
 {
-    for
+    for (int i = initial_number; i < final_number; i++)
+    {
+        int prime = 
+    }
 }
