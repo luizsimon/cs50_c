@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool IsPrime(int initial_number, int final_number);
+void IsPrime(int initial_number, int final_number);
 
 int main(void)
 {
@@ -10,18 +10,19 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    //IsPrime(i, f);
-    if (IsPrime(i, f))
-    {
-         printf("- primo");
-    }
-     else
-    {
-         printf("- no primo");
-     }
+    IsPrime(i, f);
+
+    //if (IsPrime(i, f))
+    //{
+    //     printf("- primo");
+    //}
+    // else
+    //{
+    //     printf("- no primo");
+    // }
 }
 
-bool IsPrime(int initial_number, int final_number)
+void IsPrime(int initial_number, int final_number)
 {
     // if (initial_number == 1)
     //{
@@ -43,13 +44,13 @@ bool IsPrime(int initial_number, int final_number)
             if (prime == 0)
             {
                 printf("\n%i - No Prime", i);
-                return true;
+                //return true;
                 break;
             }
             else
             {
                 printf("\n%i - Prime", i);
-                return false;
+                //return false;
                 break;
             }
         }
@@ -59,5 +60,5 @@ bool IsPrime(int initial_number, int final_number)
     }
     // int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
     // if (prime =! 0 )
-    return true;
+    //return true;
 }
