@@ -10,15 +10,15 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    IsPrime(i,f);
-    //if (IsPrime(i, f))
+    IsPrime(i, f);
+    // if (IsPrime(i, f))
     //{
-    //    printf("- primo");
-    //}
-    //else
+    //     printf("- primo");
+    // }
+    // else
     //{
-    //    printf("- no primo");
-    //}
+    //     printf("- no primo");
+    // }
 }
 
 void IsPrime(int initial_number, int final_number)
@@ -39,20 +39,20 @@ void IsPrime(int initial_number, int final_number)
         {
 
             int prime = (i % j);
-            printf("\n%i", i);
 
-            //if (prime == 0)
-            //{
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
+            if (prime == 0)
+            {
+                printf("\n%i - No Prime", i);
+                break;
+            }
+            else
+            {
+                printf("\n%i - Prime", i);;
+            }
         }
         // printf("%i - é prime\n", i);
 
-         printf("//");
+        printf("//");
     }
     // int prime = (i % 2) + (i % 3) + (i % 5) + (i % 7) + (i % 9);
     // if (prime =! 0 )
