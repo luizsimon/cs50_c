@@ -37,7 +37,7 @@ void IsPrime(int initial_number, int final_number)
                 printf("%i - nao é prime", i);
             }
         }
-            printf("%i\n", soma);
+            printf("%i - é prime\n", i);
 
         // printf("//");
     }
