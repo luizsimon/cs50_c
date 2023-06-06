@@ -42,7 +42,8 @@ int IsPrime(int initial_number, int final_number)
 
             if (prime == 0)
             {
-                return true;
+                return true
+                ;
             }
             else
             {
