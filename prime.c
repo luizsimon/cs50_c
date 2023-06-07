@@ -49,8 +49,8 @@ void IsPrime(int initial_number, int final_number)
                     break;
                 }
             }
-        printf("i = %i  Soma = %i", i, soma);
-       // printf("\n//\n");
+        //printf("i = %i  Soma = %i", i, soma);
+        // printf("\n//\n");
     }
 }
 }
