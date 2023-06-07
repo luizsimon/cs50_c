@@ -18,16 +18,13 @@ int main(void)
         }
         else
         {
-
-            printf("\n%i Primo\n", m);
+            printf("%i\n", m);
         }
     }
 }
 
 bool IsPrime(int initial_number, int final_number)
 {
-    if ()
-
     int i = initial_number;
     int prime;
     int j = i;
