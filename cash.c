@@ -14,6 +14,7 @@ int main(void)
 
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
+    printf("%i", quarters);
     int dimes = calculate_dimes(cents, quarters);
     int nickels = calculate_nickels(cents, dimes, quarters);
     int pennies = calculate_pennies(cents, nickels, dimes, quarters);
