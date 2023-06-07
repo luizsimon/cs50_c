@@ -27,22 +27,18 @@ int main(void)
 
 bool IsPrime(int initial_number, int final_number)
 {
-
-    for (int i = initial_number; i < final_number; i++)
+    int prime;
+    int j = m - 1;
+    do
     {
-        int prime;
-        int j = i - 1;
-        do
-        {
-            prime = (i % j);
-            j--;
-        }
-        while ((j > 1 && prime != 0));
+        prime = (i % j);
+        j--;
+    }
+    while ((j > 1 && prime != 0));
 
-        if ((prime == 0 && i > 3))
-        {
-            return true;
-        }
+    if ((prime == 0 && i > 3))
+    {
+        return true;
     }
     return false;
 }
