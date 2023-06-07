@@ -48,12 +48,12 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    int change_quarters = 0;
-    do
+    int change_quarters;
+    int quarters = 0;
+    for (change_quarters = 0; change_quarters > 25; change_quarters++)
     {
-        change_quarters = (cents % 25) - change_quarters;
+        quarters = (cents % 25) - quarters;
     }
-    while (change_quarters > 25);
     return change_quarters;
 }
 
