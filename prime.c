@@ -52,19 +52,20 @@ bool IsPrime(int initial_number, int final_number)
     for (int i = initial_number; i < final_number; i++)
     {
         int prime = 0;
-        int j = i;
+        int j = i - 1;
         do
         {
             prime = (i % j);
             j--;
             // printf("\n\nj = %i\n\n", j);
         }
-        while (((j > 1 && prime != 0)) || (i == j + 1));
+        while ((j > 1 && prime != 0)); //|| (i == j + 1)
 
-        if (prime == 0 && i > 3)
+        if ((prime == 0) || (i > 3))
         {
             return false;
         }
+       
     }
     return true;
 }
