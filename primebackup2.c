@@ -26,6 +26,8 @@ int main(void)
 
 bool IsPrime(int initial_number, int final_number)
 {
+    if
+
     int i = initial_number;
     int prime;
     int j = i;
