@@ -11,10 +11,10 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    bool prime = IsPrime(i,f);
+    //bool prime = IsPrime(i,f);
 
     //IsPrime(i, f);
-     if (prime)
+     if (IsPrime(i,f))
     {
         PrintNumber(i,f);
         //printf("\n%i Primo\n", m);
@@ -55,17 +55,10 @@ bool IsPrime(int initial_number, int final_number)
 
         if (prime == 0 && i > 3)
         {
-            //printf("\ni = %i NO PRIMO\n", i);
             return false;
         }
-        else
-        {
-            //printf("\ni = %i PRIMO\n", i);
-            return true;
-        }
-
     }
-    return (prime == 0 && i > 3);
+    return true;
 }
 
 void PrintNumber (int initial_number, int final_number)
