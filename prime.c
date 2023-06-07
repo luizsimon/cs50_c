@@ -6,17 +6,19 @@ bool IsPrime(int initial_number, int final_number);
 
 int main(void)
 {
+    int minimum;
+    int maximum;
     do
     {
-        int minimum = get_int("Minimum: ");
+        minimum = get_int("Minimum: ");
     }
     while (minimum < 0);
 
     do
     {
-        int maximum = get_int("Maximum: ");
+        maximum = get_int("Maximum: ");
     }
-    while ((maximum < 0) || (maximum < minimum)); min 5   max 3
+    while (maximum < minimum);
 
 
     for (int i = minimum; i <= maximum; i++)
