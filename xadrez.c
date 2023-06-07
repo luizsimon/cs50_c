@@ -39,7 +39,7 @@ void PrintXadrez(int tamanho)
                 j++;
             }
         }
-        while (j < tamanho/2);
+        while (j > i/2);
 
         printf("\n");
     }

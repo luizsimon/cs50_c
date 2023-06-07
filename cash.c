@@ -71,7 +71,7 @@ void calculate_quarters(int cents)
     //   quarters = (cents % 25);
     //    cents = cents - quarters;
     //}
-    printf("Cents = %i change_quarters = %i ", quarters, cents);
+    printf("Cents = %i change_quarters = %i ", quarters, change_quarters);
     //return change_quarters;
 }
 
