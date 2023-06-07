@@ -2,8 +2,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-void IsPrime(int initial_number, int final_number);
-// void PrintNumber(int initial_number, int final_number);
+bool IsPrime(int initial_number, int final_number);
+//void PrintNumber(int initial_number, int final_number);
 
 int main(void)
 {
@@ -13,19 +13,19 @@ int main(void)
     int f = get_int("final: ");
     // bool prime = IsPrime(i,f);
 
-    IsPrime(i, f);
-    //for (int m = i; m < f; m++)
-    //{
-    //    if (IsPrime(i, f))
-    //    {
-    //        // PrintNumber(i,f);
-    //         printf("\n%i No Primo\n", m);
-    //    }
-    //    else
-    //    {
-    //        //PrintNumber(i, f);
-    //        printf("\n%i Primo\n", m);
-    //    }
+    //IsPrime(i, f);
+    for (int m = i; m < f; m++)
+    {
+        if (IsPrime(i, f))
+        {
+            // PrintNumber(i,f);
+             printf("\n%i No Primo\n", m);
+        }
+        else
+        {
+            //PrintNumber(i, f);
+            printf("\n%i Primo\n", m);
+        }
     }
 
     // if (IsPrime(i, f))
@@ -36,9 +36,9 @@ int main(void)
     //{
     //      printf("- no primo");
     //  }
+}
 
-
-void IsPrime(int initial_number, int final_number)
+bool IsPrime(int initial_number, int final_number)
 {
     // if (initial_number == 1)
     //{
@@ -60,16 +60,15 @@ void IsPrime(int initial_number, int final_number)
             // printf("\n\nj = %i\n\n", j);
         }
         while ((j > 1 && prime != 0)); //|| (i == j + 1)
-        printf("i = %i  prime = %i\n", i, prime);
+        //printf("i = %i  prime = %i\n", i, prime);
         if ((prime == 0 && i > 3))
         {
-            //return true;
+            return true;
         }
 
     }
-    //return true;
+    return false;
 }
-
 // void PrintNumber(int initial_number, int final_number)
 //{
 //     for (int m = initial_number; m < final_number; m++)
