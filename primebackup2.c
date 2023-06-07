@@ -12,7 +12,7 @@ int main(void)
 
     for (int m = i; m < f; m++)
     {
-        if (IsPrime(i, f))
+        if (IsPrime(m, f))
         {
 
             printf("\n%i No Primo\n", m);
