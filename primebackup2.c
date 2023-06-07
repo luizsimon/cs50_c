@@ -12,7 +12,11 @@ int main(void)
 
     for (int m = i; m < f; m++)
     {
-        if (IsPrime(m, f))
+        if (m == 1)
+        {
+            
+        }
+        else if (IsPrime(m, f))
         {
 
         }
