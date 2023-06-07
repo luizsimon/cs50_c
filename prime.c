@@ -12,14 +12,14 @@ int main(void)
     int f = get_int("final: ");
     IsPrime(i, f);
 
-    //if (IsPrime(i, f))
+    // if (IsPrime(i, f))
     //{
-    //     printf("- primo");
-    //}
-    // else
-    //{
-    //     printf("- no primo");
+    //      printf("- primo");
     // }
+    //  else
+    //{
+    //      printf("- no primo");
+    //  }
 }
 
 void IsPrime(int initial_number, int final_number)
@@ -35,12 +35,10 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        for ()
-
-
-
-
-
+        for (j = 0; j < i; j++)
+        {
+            
+        }
 
         printf("//");
     }
