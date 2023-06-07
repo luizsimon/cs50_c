@@ -54,7 +54,7 @@ void IsPrime(int initial_number, int final_number)
                 break;
                 //return true;
             }
-            else if (((prime == 0) && (j < i)))
+            else if (((prime != 0) && (j < i)))
         }
     }
     //return false;
