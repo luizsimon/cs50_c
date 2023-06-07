@@ -48,12 +48,13 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    int quarters;
+    int change_quarters = 0;
     do
     {
-        quarters = 
+        change_quarters = (cents % 25) - change_quarters;
     }
-    return 0;
+    while (change_quarters > 25);
+    return change_quarters;
 }
 
 int calculate_dimes(int cents)
