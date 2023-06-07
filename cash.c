@@ -57,14 +57,14 @@ int get_cents(void)
 
 void calculate_quarters(int cents)
 {
-    int change_quarters = 3;
+    int change_quarters;
     int quarters = 0;
     for (change_quarters = 0; quarters > 25; change_quarters++)
     {
         quarters = (cents % 25);
         cents = cents - quarters;
     }
-    printf("Cents = %i change_quarters = %i ", cents, change_quarters);
+    printf("Cents = %i change_quarters = %i ", quarters, change_quarters);
     //return change_quarters;
 }
 
