@@ -16,7 +16,7 @@ int main(void)
     {
         int maximum = get_int("Maximum: ");
     }
-    while (maximum < 0 && maximum < minimum);
+    while ((maximum < 0) || (maximum < minimum)); min 5   max 3
 
 
     for (int i = minimum; i <= maximum; i++)
