@@ -51,7 +51,7 @@ void IsPrime(int initial_number, int final_number)
             j--;
             printf("\n\nj = %i\n\n", j);
         }
-        while (j > 1 && prime != 0 && i > 1);
+        while (j > 1 && prime != 0 || i == j);
 
         if (prime == 0 && i > 3)
         {
