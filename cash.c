@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 int get_cents(void);
-void calculate_quarters(int cents);
-int calculate_dimes(int cents, int change_quarters);
-int calculate_nickels(int cents, int change_dimes, int change_quarters);
-int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters);
+int calculate_quarters(int cents);
+int calculate_dimes(int cents, int HowManyQuartersUsed);
+int calculate_nickels(int cents, int change_dimes, int HowManyQuartersUsed);
+int calculate_pennies(int cents, int change_nickeles, int change_dimes, int HowManyQuartersUsed);
 
 int main(void)
 {
@@ -55,15 +55,16 @@ int get_cents(void)
     return cents;
 }
 
-void calculate_quarters(int cents)
+int calculate_quarters(int cents)
 {
     int change_quarters = 1;
+    int HowManyQuartersUsed = 0;
     int quarters = cents;
     while (quarters > 25)
     {
         quarters = cents - (change_quarters*25);
         cents = cents - (change_quarters*25);
-        change_quarters++;
+        HowManyQuartersUsed = HowManyQuartersUsed + change_quarters;
     }
 
     //for (change_quarters = 0; quarters > 25; change_quarters++)
@@ -71,35 +72,42 @@ void calculate_quarters(int cents)
     //   quarters = (cents % 25);
     //    cents = cents - quarters;
     //}
-    printf("Cents = %i change_quarters = %i ", quarters, change_quarters);
-    //return change_quarters;
+    //printf("Cents = %i change_quarters = %i ", quarters, HowManyQuartersUsed);
+    return HowManyQuartersUsed;
 }
 
-int calculate_dimes(int cents, int change_quarters)
+int calculate_dimes(int cents, int HowManyQuartersUsed)
 {
-    int dimes = cents - change_quarters*25;
-    int change_dimes;
-    int dimes_for = 0;
-    for (change_dimes = 0; change_dimes > 10; change_dimes++)
+    int cents1 = cents - HowManyQuartersUsed*25;
+    int dimes = cents1;
+    int change_dimes = 1;
+    int HowManyDimesUsed = 0;
+    while (dimes > 10)
     {
-        dimes_for = (dimes % 10) - dimes_for;
+        dimes = cents1 - (change_dimes*10);
+        cents1 = cen - (change_dimes*10);
+        HowManyDimesUsed = HowManyDimesUsed + change_dimes;
     }
-    return change_dimes;
+
+    return HowManyDimesUsed;
 }
 
-int calculate_nickels(int cents, int change_dimes, int change_quarters)
+int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
 {
-    int nickels = cents - change_quarters*25 - change_dimes*10;
-    int change_nickels;
-    int nickels_for = 0;
-    for (change_nickels = 0; change_nickels > 5; change_nickels++)
+    int cents2 = cents - HowManyQuartersUsed*25 - HowManyDimesUsed*10;
+    int nickels = cents1;
+    int change_nickels = 1;
+    int HowManyNickelsUsed = 0;
+    while (nickels > 5)
     {
-        nickels_for = (nickels % 5) - nickels_for;
+        nickels = cents2 - (change_nickels*5);
+        cents1 = dimes - (change_nickels*5);
+        HowManyNickelsUsed = HowManyNickelsUsed + change_nickels;
     }
     return change_nickels;
 }
 
-int calculate_pennies(int cents, int change_nickels, int change_dimes, int change_quarters)
+int calculate_pennies(int cents, int change_nickels, int change_dimes, int HowManyQuartersUsed)
 {
     int pennies = cents - change_nickels*5 - change_quarters*25 - change_dimes*10;
     int change_pennies;
