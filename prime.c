@@ -50,7 +50,7 @@ void IsPrime(int initial_number, int final_number)
             soma = soma - prime;
             if (((prime == 0) && (j < i)) || (soma == 0))
             {
-                printf("\nPRIMO\n");
+                printf("\ni = %i  PRIMO\n", i);
                 break;
                 //return true;
             }
