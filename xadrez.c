@@ -17,13 +17,13 @@ int TamanhoXadrez(void)
     {
        tamanho = get_int("Qual o tamanho do tabuleiro? ");
     }
-    while (tamanho % 2 == 0);
+    while (tamanho % 2 != 0);
     return tamanho;
 }
 
 void PrintXadrez(int tamanho)
 {
-    for (int i = 0; i < tamanho - 1; i++)
+    for (int i = 0; i < tamanho; i++)
     {
         int j = 0;
         do
@@ -31,7 +31,7 @@ void PrintXadrez(int tamanho)
             printf("*#");
             j++;
         }
-        while (j < i/2);
+        while (j > i/2);
 
         printf("\n");
     }
