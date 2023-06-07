@@ -39,7 +39,7 @@ void IsPrime(int initial_number, int final_number)
         //int prime = 0;
         for (int j = i; j > 1; j--)
         {
-            int prime = (i * j);
+            int prime = (i % j);
             soma = soma + prime;
             printf("\nPRIME = %i\n", prime);
         }
