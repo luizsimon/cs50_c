@@ -51,7 +51,7 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        int prime = 0;
+        int prime;
         int j = i - 1;
         do
         {
