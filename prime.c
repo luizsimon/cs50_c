@@ -52,10 +52,15 @@ void IsPrime(int initial_number, int final_number)
         }
         while (j > 1);
 
-        if ((prime == 0))
+        if (prime == 0 && i > 3)
         {
             printf("\ni = %i NO PRIMO\n", i);
             // return true;
         }
+        else
+        {
+            printf("\ni = %i PRIMO\n", i);
+        }
         // return false;
     }
+}
