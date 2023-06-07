@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int get_cents(void);
-int calculate_quarters(int cents);
+void calculate_quarters(int cents);
 int calculate_dimes(int cents, int change_quarters);
 int calculate_nickels(int cents, int change_dimes, int change_quarters);
 int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters);
@@ -11,17 +11,18 @@ int main(void)
 {
     // Ask how many cents the customer is owed
     int cents = get_cents();
-
+    calculate_quarters(cents);
     // Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
-    printf("%i", quarters);
-    int dimes = calculate_dimes(cents, quarters);
-    int nickels = calculate_nickels(cents, dimes, quarters);
-    int pennies = calculate_pennies(cents, nickels, dimes, quarters);
+    //int quarters = calculate_quarters(cents);
+    //printf("%i", quarters);
+    //int dimes = calculate_dimes(cents, quarters);
+    //int nickels = calculate_nickels(cents, dimes, quarters);
+    //int pennies = calculate_pennies(cents, nickels, dimes, quarters);
 
     // Sum coins
-    int coins = quarters + dimes + nickels + pennies;
-    printf("%i\n", coins);
+    //int coins = quarters + dimes + nickels + pennies;
+    //printf("%i\n", coins);
+
     //cents = cents - quarters * 25;
 
     // Calculate the number of dimes to give the customer
@@ -54,7 +55,7 @@ int get_cents(void)
     return cents;
 }
 
-int calculate_quarters(int cents)
+void calculate_quarters(int cents)
 {
     int change_quarters = 3;
     int quarters = 0;
@@ -63,7 +64,8 @@ int calculate_quarters(int cents)
         quarters = (cents % 25);
         cents = cents - quarters;
     }
-    return change_quarters;
+    printf("Cents = %i change_quarters = %i ", cents, change_quarters);
+    //return change_quarters;
 }
 
 int calculate_dimes(int cents, int change_quarters)
