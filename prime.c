@@ -37,7 +37,7 @@ bool IsPrime(int initial_number, int final_number)
         prime = (i % j);
         j--;
     }
-    while ((j > 1 && prime != 0) ||  i != 1);
+    while ((prime != 0) || (i == j + 1 && i != 1));
 
     if ((prime == 0 && i > 3))
     {
