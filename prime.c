@@ -22,7 +22,7 @@ int main(void)
     //  }
 }
 
-void IsPrime(int initial_number, int final_number)
+bool IsPrime(int initial_number, int final_number)
 {
     // if (initial_number == 1)
     //{
@@ -35,8 +35,20 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        for (int j = i)
+        for (int j = i; j > 1; j--)
+        {
+            int prime = (i % j);
 
+            if ((prime == 0) && (j != i))
+            {
+                break;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
-
+    return false;
 }
