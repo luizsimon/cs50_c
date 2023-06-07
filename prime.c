@@ -43,14 +43,15 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
+        int soma = 1;
         for (int j = i; j > 1; j--)
         {
             int prime = (i % j);
-
-            if ((prime == 0) && (j < i))
+            soma = soma - prime;
+            if (((prime == 0) && (j < i)) || (soma == 0))
             {
-                break;
                 printf("\nPRIMO\n");
+                break;
                 //return true;
             }
         }
