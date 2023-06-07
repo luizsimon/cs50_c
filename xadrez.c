@@ -28,8 +28,16 @@ void PrintXadrez(int tamanho)
         int j = 0;
         do
         {
-            printf("*#");
-            j++;
+            if (j % 2 == 0)
+            {
+                printf("*#");
+                j++;
+            }
+            else
+            {
+                 printf("#*");
+                j++;
+            }
         }
         while (j < tamanho/2);
 
