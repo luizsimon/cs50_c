@@ -11,14 +11,14 @@ int main(void)
     int i = get_int("inicial: ");
     int f = get_int("final: ");
     IsPrime(i, f);
-    // if (IsPrime(i, f))
+    //if (IsPrime(i, f))
     //{
-    //     printf("\nPrimo\n");
-    // }
-    // else
+    //    printf("\nPrimo\n");
+    //}
+    //else
     //{
-    //     printf("\nNo Primo\n");
-    // }
+    //    printf("\nNo Primo\n");
+    //}
 
     // if (IsPrime(i, f))
     //{
@@ -43,19 +43,23 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        int prime = 0;
-        int j = i;
-        do
+        int soma = 1;
+        for (int j = i; j > 1; j--)
         {
-            prime = (i % j);
-            j--;
+            int prime = (i % j);
+            soma = soma - prime;
+            if (((prime == 0) && (j < i)))
+            {
+                printf("\ni = %i NO PRIMO\n", i);
+                break;
+                //return true;
+            }
+            else if (((prime != 0) && (j < i)) && (soma < 0))
+            {
+                printf("\ni = %i PRIMO Soma = %i\n", i, soma);
+                break;
+            }
         }
-        while (j > 1);
-
-        if ((prime == 0))
-        {
-            printf("\ni = %i NO PRIMO\n", i);
-            // return true;
-        }
-        // return false;
     }
+    //return false;
+}
