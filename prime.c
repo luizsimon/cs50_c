@@ -49,7 +49,7 @@ void IsPrime(int initial_number, int final_number)
         {
             prime = (i % j);
             j--;
-            //printf("\n\nj = %i\n\n", j);
+            printf("\n\nj = %i\n\n", j);
         }
         while (j > 1 && prime != 0);
 
