@@ -43,14 +43,14 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
-        int prime = 1;
+        int prime = 0;
         int j = i - 1;
         do
         {
             prime = (i % j);
             j--;
         }
-        while (j > 1);
+        while (j == 2);
 
         if (prime == 0 && i > 3)
         {
