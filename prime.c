@@ -50,7 +50,8 @@ bool IsPrime(int initial_number, int final_number)
         prime = (i % j);
         j--;
     }
-    while ((j > 1 && prime != 0) || (i == j + 1 && i != 1)); // se tem &&, sendo uma delas falsa, todo o () é false. Se tem || pra ser falso todas precisam ser falso, senão é true
+    while ((j > 1 && prime != 0) || (i == j + 1 && i != 1)); // se tem &&, sendo uma delas falsa, todo o () é false.
+// Se tem || pra ser falso todas precisam ser falso, senão é true
 
     // vai retornar true se NAO FOR PRIMO e false SE FOR PRIMO
     if ((prime == 0 && i > 3))
