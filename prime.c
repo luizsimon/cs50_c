@@ -12,13 +12,13 @@ int main(void)
     {
         minimum = get_int("Minimum: ");
     }
-    while (minimum < 0);
+    while (minimum <= 0);
 
     do
     {
         maximum = get_int("Maximum: ");
     }
-    while (maximum < minimum);
+    while (maximum <= minimum);
 
 
     for (int i = minimum; i <= maximum; i++)
