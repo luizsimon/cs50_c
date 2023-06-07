@@ -35,8 +35,9 @@ void IsPrime(int initial_number, int final_number)
 
     for (int i = initial_number; i < final_number; i++)
     {
+        for ()
 
-        
+
 
 
 
