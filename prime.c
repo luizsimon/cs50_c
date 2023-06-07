@@ -61,9 +61,9 @@ void IsPrime(int initial_number, int final_number)
         }
         while ((j > 1 && prime != 0)); //|| (i == j + 1)
         printf("i = %i  prime = %i\n", i, prime);
-        if ((prime == 0) || (i > 3))
+        if ((prime == 0 && i > 3))
         {
-            //return false;
+            //return true;
         }
 
     }
