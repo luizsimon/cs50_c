@@ -84,6 +84,11 @@ int calculate_nickels(int cents, int change_dimes, int change_quarters)
 int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters)
 {
     int pennies = cents - change_nickels*5 - change_quarters*25 - change_dimes*10;
-
+    int change_pennies;
+    int pennies_for = 0;
+    for (change_pennies = 0; change_pennies > 5; change_pennies++)
+    {
+        pennies_for = (pennies % 5) - pennies_for;
+    }
     return 0;
 }
