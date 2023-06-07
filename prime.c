@@ -48,12 +48,13 @@ void IsPrime(int initial_number, int final_number)
         {
             int prime = (i % j);
             soma = soma - prime;
-            if (((prime == 0) && (j < i)) || (soma == 0))
+            if (((prime == 0) && (j < i)))
             {
-                printf("\ni = %i  PRIMO\n", i);
+                printf("\ni = %i NO PRIMO\n", i);
                 break;
                 //return true;
             }
+            else if (((prime == 0) && (j < i)))
         }
     }
     //return false;
