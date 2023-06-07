@@ -74,8 +74,8 @@ bool IsPrime(int initial_number, int final_number)
 
 int numero (int initial_number, int final_number)
 {
-    
-    for (int m = initial_number, m < final_number; i++)
+    int m = initial_number;
+    for (m, m < final_number; i++)
     {
         return m;
     }
