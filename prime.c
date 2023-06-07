@@ -47,16 +47,11 @@ void IsPrime(int initial_number, int final_number)
         {
             int prime = (i % j);
 
-            if ((prime == 0) && (j == i))
+            if ((prime == 0) && (j < i))
             {
                 break;
                 printf("\nPRIMO\n");
                 //return true;
-            }
-            else
-            {
-                printf("\nNO PRIMO\n");
-                //return false;
             }
         }
     }
