@@ -73,7 +73,7 @@ int calculate_nickels(int cents, int change_dimes, int change_quarters)
 {
     int nickels = cents - change_quarters*25 - change_dimes*10;
     int change_nickels;
-    int nickls_for = 0;
+    int nickels_for = 0;
     for (change_nickels = 0; change_nickels > 5; change_nickels++)
     {
         nickels_for = (nickels % 5) - nickels_for;
@@ -81,7 +81,7 @@ int calculate_nickels(int cents, int change_dimes, int change_quarters)
     return change_nickels;
 }
 
-int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters)
+int calculate_pennies(int cents, int change_nickels, int change_dimes, int change_quarters)
 {
     int pennies = cents - change_nickels*5 - change_quarters*25 - change_dimes*10;
     int change_pennies;
@@ -90,5 +90,5 @@ int calculate_pennies(int cents, int change_nickeles, int change_dimes, int chan
     {
         pennies_for = (pennies % 5) - pennies_for;
     }
-    return 0;
+    return change_pennies;
 }
