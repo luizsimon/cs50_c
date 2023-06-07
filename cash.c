@@ -62,7 +62,7 @@ void calculate_quarters(int cents)
     while (quarters > 25)
     {
         quarters = cents - (change_quarters*25);
-        cents = quarters;
+        cents = cents - (change_quarters*25);
         change_quarters++;
     }
 
