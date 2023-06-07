@@ -4,8 +4,8 @@
 int get_cents(void);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents, int change_quarters);
-int calculate_nickels(int cents, int change_dimes);
-int calculate_pennies(int cents);
+int calculate_nickels(int cents, int change_dimes, int change_quarters);
+int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters);
 
 int main(void)
 {
@@ -69,20 +69,21 @@ int calculate_dimes(int cents, int change_quarters)
     return change_dimes;
 }
 
-int calculate_nickels(int cents, int change_dimes)
+int calculate_nickels(int cents, int change_dimes, int change_quarters)
 {
-    int nickles = cents - change_dimes*10;
-    int change_nickles;
-    int nickles_for = 0;
-    for (change_nickles = 0; change_nickles > 10; change_nickles++)
+    int nickels = cents - change_quarters*25 - change_dimes*10;
+    int change_nickels;
+    int nickls_for = 0;
+    for (change_nickels = 0; change_nickels > 5; change_nickels++)
     {
-        nickles_for = (nickles % 10) - nickles_for;
+        nickels_for = (nickels % 5) - nickels_for;
     }
-    return change_nickles;
+    return change_nickels;
 }
 
-int calculate_pennies(int cents, int change_nickles)
+int calculate_pennies(int cents, int change_nickeles, int change_dimes, int change_quarters)
 {
-    int pennies = cents - 
+    int pennies = cents - change_nickels*5 - change_quarters*25 - change_dimes*10;
+
     return 0;
 }
