@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 bool IsPrime(int initial_number, int final_number);
-void PrintNumber (int initial_number, int final_number);
+void PrintNumber(int initial_number, int final_number);
 
 int main(void)
 {
@@ -11,14 +11,18 @@ int main(void)
     // GetNumbers
     int i = get_int("inicial: ");
     int f = get_int("final: ");
-    //bool prime = IsPrime(i,f);
+    // bool prime = IsPrime(i,f);
 
-    //IsPrime(i, f);
-     if (IsPrime(i,f))
+    // IsPrime(i, f);
+    if (IsPrime(i, f))
     {
-        PrintNumber(i,f);
-        //printf("\n%i Primo\n", m);
-     }
+        // PrintNumber(i,f);
+        // printf("\n%i Primo\n", m);
+    }
+    else
+    {
+        PrintNumber(i, f);
+    }
 
     // if (IsPrime(i, f))
     //{
@@ -49,7 +53,7 @@ bool IsPrime(int initial_number, int final_number)
         {
             prime = (i % j);
             j--;
-            //printf("\n\nj = %i\n\n", j);
+            // printf("\n\nj = %i\n\n", j);
         }
         while (((j > 1 && prime != 0)) || (i == j + 1));
 
@@ -61,7 +65,7 @@ bool IsPrime(int initial_number, int final_number)
     return true;
 }
 
-void PrintNumber (int initial_number, int final_number)
+void PrintNumber(int initial_number, int final_number)
 {
     for (int m = initial_number; m < final_number; m++)
     {
