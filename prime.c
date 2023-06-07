@@ -65,7 +65,7 @@ bool IsPrime(int initial_number, int final_number)
         }
 
     }
-    //return false;
+    return (prime == 0 && i > 3);
 }
 
 void PrintNumber (int initial_number, int final_number)
