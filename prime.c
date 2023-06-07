@@ -47,11 +47,11 @@ void IsPrime(int initial_number, int final_number)
         int j = i;
         do
         {
-            prime = (i % j);
+            prime = (i % j); //5 % 4 = 1
             j--;
             printf("\n\nj = %i\n\n", j);
         }
-        while ((j > 1 && prime != 0) || (i == j && prime == 0));
+        while ((j > 1 && prime =! 0) || (i == j || prime != 0));
 
         if (prime == 0 && i > 3)
         {
