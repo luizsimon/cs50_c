@@ -38,6 +38,7 @@ int main(void)
     }
 }
 
+// funcao para definir se o numero é primo
 bool IsPrime(int initial_number, int final_number)
 {
     int i = initial_number;
@@ -48,7 +49,7 @@ bool IsPrime(int initial_number, int final_number)
         prime = (i % j);
         j--;
     }
-    while ((j > 1 && prime != 0) || (i == j + 1 && i != 1));
+    while ((j > 1 && prime != 0) || (i == j + 1 && i != 1)); // se tem &&, sendo uma delas verdadeira, todo o () é true. Se tem || pra ser falso 
 
     if ((prime == 0 && i > 3))
     {
