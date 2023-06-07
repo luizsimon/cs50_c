@@ -51,7 +51,7 @@ void IsPrime(int initial_number, int final_number)
             }
             if  (prime == 0)
             {
-                printf("\nAA\n");
+                printf("\ni = %i  Prime = %i\n", i, prime);
                 break;
             }
 
