@@ -7,22 +7,22 @@ bool IsPrime(int initial_number, int final_number);
 int main(void)
 {
 
-    int i = get_int("Minimum: ");
-    int f = get_int("Maximum: ");
+    int minimum = get_int("Minimum: ");
+    int maximum = get_int("Maximum: ");
 
-    for (int m = i; m <= f; m++)
+    for (int i = minimum; i <= maximum; i++)
     {
-        if (m == 1)
+        if (i == 1)
         {
 
         }
-        else if (IsPrime(m, f))
+        else if (IsPrime(i, maximum))
         {
 
         }
         else
         {
-            printf("%i\n", m);
+            printf("%i\n", i);
         }
     }
 }
