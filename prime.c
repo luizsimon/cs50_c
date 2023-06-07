@@ -6,9 +6,18 @@ bool IsPrime(int initial_number, int final_number);
 
 int main(void)
 {
+    do
+    {
+        int minimum = get_int("Minimum: ");
+    }
+    while (minimum < 0);
 
-    int minimum = get_int("Minimum: ");
-    int maximum = get_int("Maximum: ");
+    do
+    {
+        int maximum = get_int("Maximum: ");
+    }
+    while (maximum < 0 && maximum < minimum);
+
 
     for (int i = minimum; i <= maximum; i++)
     {
@@ -37,7 +46,7 @@ bool IsPrime(int initial_number, int final_number)
         prime = (i % j);
         j--;
     }
-    while ((prime != 0) || (i == j + 1 && i != 1));
+    while ((j > 1 && prime != 0) || (i == j + 1 && i != 1));
 
     if ((prime == 0 && i > 3))
     {
