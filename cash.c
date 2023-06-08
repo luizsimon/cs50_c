@@ -16,8 +16,11 @@ int main(void)
     int quarters = calculate_quarters(cents);
     printf("Quarters = %i\n", quarters);
     int dimes = calculate_dimes(cents, quarters);
+    printf("Dimes = %i\n", dimes);
     int nickels = calculate_nickels(cents, dimes, quarters);
+    printf("Nickels = %i\n", nickels);
     int pennies = calculate_pennies(cents, nickels, dimes, quarters);
+    printf("Pennies = %i\n", pennies);
 
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
