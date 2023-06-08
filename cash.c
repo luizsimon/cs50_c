@@ -14,45 +14,29 @@ int main(void)
     calculate_quarters(cents);
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
-    printf("Quarters = %i\n", quarters);
+    //printf("Quarters = %i\n", quarters);
+    // Calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents, quarters);
-    printf("Dimes = %i\n", dimes);
+    //printf("Dimes = %i\n", dimes);
+    // Calculate the number of nickels to give the customer
     int nickels = calculate_nickels(cents, dimes, quarters);
-    printf("Nickels = %i\n", nickels);
+    //printf("Nickels = %i\n", nickels);
+     // Calculate the number of pennies to give the customer
     int pennies = calculate_pennies(cents, dimes, quarters, nickels);
-    printf("Pennies = %i\n", pennies);
+    //printf("Pennies = %i\n", pennies);
 
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
     printf("%i\n", coins);
 
-    //cents = cents - quarters * 25;
 
-    // Calculate the number of dimes to give the customer
-    //int dimes = calculate_dimes(cents);
-    //cents = cents - dimes * 10;
-
-    // Calculate the number of nickels to give the customer
-    //int nickels = calculate_nickels(cents);
-    //cents = cents - nickels * 5;
-
-    // Calculate the number of pennies to give the customer
-    //int pennies = calculate_pennies(cents);
-    //cents = cents - pennies * 1;
-
-    // Sum coins
-    //int coins = quarters + dimes + nickels + pennies;
-
-    // Print total number of coins to give the customer
-    //printf("%i\n", coins);
 }
-
 int get_cents(void)
 {
     int cents;
     do
     {
-        cents = get_int("Fala o troco ai: ");
+        cents = get_int("Change owed: ");
     }
     while (cents < 1);
     return cents;
@@ -70,12 +54,6 @@ int calculate_quarters(int cents)
         HowManyQuartersUsed = HowManyQuartersUsed + change_quarters;
     }
 
-    //for (change_quarters = 0; quarters > 25; change_quarters++)
-    //{
-    //   quarters = (cents % 25);
-    //    cents = cents - quarters;
-    //}
-    //printf("Cents = %i change_quarters = %i ", quarters, HowManyQuartersUsed);
     return HowManyQuartersUsed;
 }
 
