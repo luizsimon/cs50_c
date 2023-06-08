@@ -25,7 +25,10 @@ void PrintXadrez(int tamanho)
 {
     for (int i = 0; i < tamanho; i++)
     {
-        for (int j )
+        for (int j = 0; j < tamanho; j++)
+        {
+            
+        }
 
 
         printf("\n");
