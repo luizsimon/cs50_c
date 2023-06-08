@@ -43,6 +43,21 @@ float get_charge(void)
     return cents;
 }
 
+int calculate_notas_100(int charge)
+{
+    int change_notas_100 = 1;
+    int HowManyNotas100Used = 0;
+    int Notas_100 = charge;
+    while (Notas_100 >= 100)
+    {
+        Notas_100 = charge - (change_notas_100 * 100);
+        charge = charge - (change_notas_100 * 100);
+        HowManyNotas100Used = HowManyNotas100Used + change_notas_100;
+    }
+
+    return HowManyNotas100Used;
+}
+
 int calculate_quarters(int charge)
 {
     int change_quarters = 1;
