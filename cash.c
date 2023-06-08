@@ -6,21 +6,24 @@ int calculate_notas_100(float charge);
 int calculate_notas_50(float charge, int HowManyNotas100Used);
 int calculate_notas_20(float charge, int HowManyNotas100Used, int HowManyNotas50Used);
 int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used);
-int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used);
-int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used);
-float soma_notas (float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used, int HowManyNotas2Used);
+int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used,
+                      int HowManyNotas10Used);
+int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used,
+                      int HowManyNotas5Used);
+float soma_notas(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used,
+                 int HowManyNotas5Used, int HowManyNotas2Used);
 int calculate_UmReal(float cents);
 int calculate_Fiftycents(float cents, int HowManyUmRealUsed);
 int calculate_quarters(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed);
 int calculate_dimes(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed);
 int calculate_nickels(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed);
-int calculate_pennies(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed, int HowManyNickelsUsed);
+int calculate_pennies(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed,
+                      int HowManyNickelsUsed);
 
 int main(void)
 {
-    // Ask how many cents the customer is owed
+    
     float charge = get_charge();
-    //printf("Troco: %.2f\n", charge);
     printf("\n");
 
     int notas_100 = calculate_notas_100(charge);
@@ -40,12 +43,10 @@ int main(void)
     if (notas_100 != 0)
     {
         printf("Notas 100 = %i\n", notas_100);
-
     }
     if (notas_50 != 0)
     {
         printf("Notas 50 = %i\n", notas_50);
-
     }
     if (notas_20 != 0)
     {
@@ -54,7 +55,6 @@ int main(void)
     if (notas_10 != 0)
     {
         printf("Notas 10 = %i\n", notas_10);
-
     }
     if (notas_5 != 0)
     {
@@ -86,24 +86,8 @@ int main(void)
     }
     if (pennies != 0)
     {
-        //printf("Moedas de 1 centavo = %i\n", pennies);
-
+        // printf("Moedas de 1 centavo = %i\n", pennies);
     }
-
-    // Calculate the number of quarters to give the customer
-
-    //printf("Quarters = %i\n", quarters);
-    // Calculate the number of dimes to give the customer
-    //printf("Dimes = %i\n", dimes);
-    // Calculate the number of nickels to give the customer
-    //printf("Nickels = %i\n", nickels);
-    // Calculate the number of pennies to give the customer
-    //printf("Pennies = %i\n", pennies);
-
-    // Sum coins
-    //int coins = quarters + dimes + nickels + pennies;
-    //printf("%i\n", coins);
-
 
 }
 float get_charge(void)
@@ -186,7 +170,8 @@ int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50
 
 int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used)
 {
-    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10;
+    float charge1 =
+        charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10;
     int change_notas_5 = 1;
     int HowManyNotas5Used = 0;
     float Notas_5 = charge1;
@@ -200,9 +185,11 @@ int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50U
     return HowManyNotas5Used;
 }
 
-int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used)
+int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used,
+                      int HowManyNotas5Used)
 {
-    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5;
+    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 -
+                    HowManyNotas10Used * 10 - HowManyNotas5Used * 5;
     int change_notas_2 = 1;
     int HowManyNotas2Used = 0;
     float Notas_2 = charge1;
@@ -216,9 +203,11 @@ int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50U
     return HowManyNotas2Used;
 }
 
-float soma_notas (float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used, int HowManyNotas2Used)
+float soma_notas(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used,
+                 int HowManyNotas5Used, int HowManyNotas2Used)
 {
-    float cents = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5 - HowManyNotas2Used * 2;
+    float cents = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10 -
+                  HowManyNotas5Used * 5 - HowManyNotas2Used * 2;
     return cents;
 }
 
@@ -271,7 +260,7 @@ int calculate_quarters(float cents, int HowManyUmRealUsed, int HowManyFiftycents
 
 int calculate_dimes(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed)
 {
-    float cents1 = cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25 ;
+    float cents1 = cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25;
     float dimes = cents1;
     int change_dimes = 1;
     int HowManyDimesUsed = 0;
@@ -287,7 +276,8 @@ int calculate_dimes(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUse
 
 int calculate_nickels(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed)
 {
-    float cents2 = cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25 - HowManyDimesUsed * 0.10;
+    float cents2 =
+        cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25 - HowManyDimesUsed * 0.10;
     float nickels = cents2;
     int change_nickels = 1;
     int HowManyNickelsUsed = 0;
@@ -300,9 +290,11 @@ int calculate_nickels(float cents, int HowManyUmRealUsed, int HowManyFiftycentsU
     return HowManyNickelsUsed;
 }
 
-int calculate_pennies(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed, int HowManyNickelsUsed)
+int calculate_pennies(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUsed, int HowManyQuartersUsed, int HowManyDimesUsed,
+                      int HowManyNickelsUsed)
 {
-    float cents3 = cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25 - HowManyDimesUsed * 0.10 - HowManyNickelsUsed * 0.05;
+    float cents3 = cents - HowManyUmRealUsed * 1 - HowManyFiftycentsUsed * 0.50 - HowManyQuartersUsed * 0.25 -
+                   HowManyDimesUsed * 0.10 - HowManyNickelsUsed * 0.05;
     float pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
