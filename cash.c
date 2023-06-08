@@ -116,7 +116,7 @@ int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, 
     int pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
-    while (pennies > 1)
+    while (pennies > 0)
     {
         pennies = cents3 - (change_pennies*1);
         cents3 = cents3 - (change_pennies*1);
