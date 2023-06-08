@@ -19,7 +19,7 @@ int main(void)
     printf("Dimes = %i\n", dimes);
     int nickels = calculate_nickels(cents, dimes, quarters);
     printf("Nickels = %i\n", nickels);
-    int pennies = calculate_pennies(cents, nickels, dimes, quarters);
+    int pennies = calculate_pennies(cents, dimes, quarters, nickels);
     printf("Pennies = %i\n", pennies);
 
     // Sum coins
