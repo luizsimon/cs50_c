@@ -34,7 +34,7 @@ int main(void)
     printf("Notas 5 = %i\n", notas_5);
     int notas_2 = calculate_notas_2(charge, notas_100, notas_50, notas_25, notas_10, notas_5);
     printf("Notas 2 = %i\n", notas_2);
-    int cents = soma_notas(charge, notas_100, notas_50, notas_25, notas_10, notas_5, notas_2);
+    int cents = soma_notas(10.59, notas_100, notas_50, notas_25, notas_10, notas_5, notas_2);
     printf("Centavos = %i\n", cents);
     int UmReal = calculate_UmReal(cents);
     printf("Moedas de 1 Real = %i\n", UmReal);
