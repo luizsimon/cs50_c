@@ -4,8 +4,8 @@
 int get_cents(void);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents, int HowManyQuartersUsed);
-int calculate_nickels(int cents, int change_dimes, int HowManyQuartersUsed);
-int calculate_pennies(int cents, int change_nickeles, int change_dimes, int HowManyQuartersUsed);
+int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed);
+int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed);
 
 int main(void)
 {
@@ -13,15 +13,15 @@ int main(void)
     int cents = get_cents();
     calculate_quarters(cents);
     // Calculate the number of quarters to give the customer
-    //int quarters = calculate_quarters(cents);
-    //printf("%i", quarters);
-    //int dimes = calculate_dimes(cents, quarters);
-    //int nickels = calculate_nickels(cents, dimes, quarters);
-    //int pennies = calculate_pennies(cents, nickels, dimes, quarters);
+    int quarters = calculate_quarters(cents);
+    printf("Quarters = %i\n", quarters);
+    int dimes = calculate_dimes(cents, quarters);
+    int nickels = calculate_nickels(cents, dimes, quarters);
+    int pennies = calculate_pennies(cents, nickels, dimes, quarters);
 
     // Sum coins
-    //int coins = quarters + dimes + nickels + pennies;
-    //printf("%i\n", coins);
+    int coins = quarters + dimes + nickels + pennies;
+    printf("%i\n", coins);
 
     //cents = cents - quarters * 25;
 
@@ -107,14 +107,17 @@ int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
     return HowManyNickelsUsed;
 }
 
-int calculate_pennies(int cents, int change_nickels, int change_dimes, int HowManyQuartersUsed)
+int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed)
 {
-    int pennies = cents - change_nickels*5 - change_quarters*25 - change_dimes*10;
-    int change_pennies;
-    int pennies_for = 0;
-    for (change_pennies = 0; change_pennies > 5; change_pennies++)
+    int cents3 = cents - HowManyQuartersUsed*25 - HowManyDimesUsed*10 - HowManyNickelsUsed*5;
+    int pennies = cents3;
+    int change_pennies = 1;
+    int HowManyPenniesUsed = 0;
+    while (pennies > 1)
     {
-        pennies_for = (pennies % 5) - pennies_for;
+        pennies = cents3 - (change_pennies*1);
+        cents3 = cents3 - (change_pennies*1);
+        HowManyPenniesUsed = HowManyPenniesUsed + change_pennies;
     }
-    return change_pennies;
+    return HowManyPenniesUsed;
 }
