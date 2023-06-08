@@ -27,11 +27,15 @@ void PrintXadrez(int tamanho)
     {
         for (int j = 0; j < tamanho; j++)
         {
-            if (i % 2 == 0)
+            if ((i + j) % 2 == 0)
             {
-
+                printf("#");
             }
-            
+            else
+            {
+                printf("*");
+            }
+
         }
 
 
