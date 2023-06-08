@@ -1,66 +1,66 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(void);
-int calculate_quarters(int cents);
-int calculate_dimes(int cents, int HowManyQuartersUsed);
-int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed);
-int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed);
+float get_charge(void);
+int calculate_quarters(int charge);
+int calculate_dimes(int charge, int HowManyQuartersUsed);
+int calculate_nickels(int charge, int HowManyDimesUsed, int HowManyQuartersUsed);
+int calculate_pennies(int charge, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed);
 
 int main(void)
 {
     // Ask how many cents the customer is owed
-    int cents = get_cents();
-    calculate_quarters(cents);
-    printf("Troco: %i\n", cents);
+    float charge = get_charge();
+    calculate_quarters(charge);
+    printf("Troco: %.2f\n", charge);
     // Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
+    int quarters = calculate_quarters(charge);
     //printf("Quarters = %i\n", quarters);
     // Calculate the number of dimes to give the customer
-    int dimes = calculate_dimes(cents, quarters);
+    int dimes = calculate_dimes(charge, quarters);
     //printf("Dimes = %i\n", dimes);
     // Calculate the number of nickels to give the customer
-    int nickels = calculate_nickels(cents, dimes, quarters);
+    int nickels = calculate_nickels(charge, dimes, quarters);
     //printf("Nickels = %i\n", nickels);
     // Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents, dimes, quarters, nickels);
+    int pennies = calculate_pennies(charge, dimes, quarters, nickels);
     //printf("Pennies = %i\n", pennies);
 
     // Sum coins
-    int coins = quarters + dimes + nickels + pennies;
-    printf("%i\n", coins);
+    //int coins = quarters + dimes + nickels + pennies;
+    //printf("%i\n", coins);
 
 
 }
-int get_cents(void)
+float get_charge(void)
 {
-    int cents;
+    float cents;
     do
     {
-        cents = get_int("Change owed: ");
+        cents = get_float("Change owed: ");
     }
     while (cents < 0);
     return cents;
 }
 
-int calculate_quarters(int cents)
+int calculate_quarters(int charge)
 {
     int change_quarters = 1;
     int HowManyQuartersUsed = 0;
-    int quarters = cents;
+    int quarters = charge;
     while (quarters >= 25)
     {
-        quarters = cents - (change_quarters * 25);
-        cents = cents - (change_quarters * 25);
+        quarters = charge - (change_quarters * 25);
+        charge = charge - (change_quarters * 25);
         HowManyQuartersUsed = HowManyQuartersUsed + change_quarters;
     }
 
     return HowManyQuartersUsed;
 }
 
-int calculate_dimes(int cents, int HowManyQuartersUsed)
+int calculate_dimes(int charge, int HowManyQuartersUsed)
 {
-    int cents1 = cents - HowManyQuartersUsed * 25;
+    int cents1 = charge - HowManyQuartersUsed * 25;
     int dimes = cents1;
     int change_dimes = 1;
     int HowManyDimesUsed = 0;
@@ -74,9 +74,9 @@ int calculate_dimes(int cents, int HowManyQuartersUsed)
     return HowManyDimesUsed;
 }
 
-int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
+int calculate_nickels(int charge, int HowManyDimesUsed, int HowManyQuartersUsed)
 {
-    int cents2 = cents - HowManyQuartersUsed * 25 - HowManyDimesUsed * 10;
+    int cents2 = charge - HowManyQuartersUsed * 25 - HowManyDimesUsed * 10;
     int nickels = cents2;
     int change_nickels = 1;
     int HowManyNickelsUsed = 0;
@@ -89,9 +89,9 @@ int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
     return HowManyNickelsUsed;
 }
 
-int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed)
+int calculate_pennies(int charge, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed)
 {
-    int cents3 = cents - HowManyQuartersUsed * 25 - HowManyDimesUsed * 10 - HowManyNickelsUsed * 5;
+    int cents3 = charge - HowManyQuartersUsed * 25 - HowManyDimesUsed * 10 - HowManyNickelsUsed * 5;
     int pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
