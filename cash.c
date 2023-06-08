@@ -5,7 +5,7 @@ int get_cents(void);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents, int HowManyQuartersUsed);
 int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed);
-int calculate_pennies(int cents, int cents2);
+int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed);
 
 int main(void)
 {
@@ -14,16 +14,16 @@ int main(void)
     calculate_quarters(cents);
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
-    printf("Quarters = %i\n", quarters);
+    //printf("Quarters = %i\n", quarters);
     // Calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents, quarters);
-    printf("Dimes = %i\n", dimes);
+    //printf("Dimes = %i\n", dimes);
     // Calculate the number of nickels to give the customer
     int nickels = calculate_nickels(cents, dimes, quarters);
-    printf("Nickels = %i\n", nickels);
+    //printf("Nickels = %i\n", nickels);
     // Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents, nickels);
-    printf("Pennies = %i\n", pennies);
+    int pennies = calculate_pennies(cents, dimes, quarters, nickels);
+    //printf("Pennies = %i\n", pennies);
 
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
@@ -86,12 +86,11 @@ int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
         HowManyNickelsUsed = HowManyNickelsUsed + change_nickels;
     }
     return HowManyNickelsUsed;
-    return cents2;
 }
 
-int calculate_pennies(int cents, int cents2)
+int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, int HowManyNickelsUsed)
 {
-    int cents3 = cents - cents2;
+    int cents3 = cents - HowManyQuartersUsed * 25 - HowManyDimesUsed * 10 - HowManyNickelsUsed * 5;
     int pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
