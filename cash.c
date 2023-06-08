@@ -126,7 +126,7 @@ int calculate_notas_100(float charge)
     int change_notas_100 = 1;
     int HowManyNotas100Used = 0;
     float Notas_100 = charge;
-    while (Notas_100 > 0)
+    while (Notas_100 >= 100)
     {
         Notas_100 = charge - (change_notas_100 * 100);
         charge = charge - (change_notas_100 * 100);
@@ -142,7 +142,7 @@ int calculate_notas_50(float charge, int HowManyNotas100Used)
     int change_notas_50 = 1;
     int HowManyNotas50Used = 0;
     float Notas_50 = charge1;
-    while (Notas_50 > 0)
+    while (Notas_50 >= 50)
     {
         Notas_50 = charge1 - (change_notas_50 * 50);
         charge1 = charge1 - (change_notas_50 * 50);
@@ -158,7 +158,7 @@ int calculate_notas_20(float charge, int HowManyNotas100Used, int HowManyNotas50
     int change_notas_20 = 1;
     int HowManyNotas20Used = 0;
     float Notas_20 = charge1;
-    while (Notas_20 > 0)
+    while (Notas_20 >= 20)
     {
         Notas_20 = charge1 - (change_notas_20 * 20);
         charge1 = charge1 - (change_notas_20 * 20);
@@ -174,7 +174,7 @@ int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50
     int change_notas_10 = 1;
     int HowManyNotas10Used = 0;
     float Notas_10 = charge1;
-    while (Notas_10 > 0)
+    while (Notas_10 >= 10)
     {
         Notas_10 = charge1 - (change_notas_10 * 10);
         charge1 = charge1 - (change_notas_10 * 10);
@@ -190,7 +190,7 @@ int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50U
     int change_notas_5 = 1;
     int HowManyNotas5Used = 0;
     float Notas_5 = charge1;
-    while (Notas_5 > 0)
+    while (Notas_5 >= 5)
     {
         Notas_5 = charge1 - (change_notas_5 * 5);
         charge1 = charge1 - (change_notas_5 * 5);
@@ -206,7 +206,7 @@ int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50U
     int change_notas_2 = 1;
     int HowManyNotas2Used = 0;
     float Notas_2 = charge1;
-    while (Notas_2 > 0)
+    while (Notas_2 >= 2)
     {
         Notas_2 = charge1 - (change_notas_2 * 2);
         charge1 = charge1 - (change_notas_2 * 2);
@@ -227,7 +227,7 @@ int calculate_UmReal(float cents)
     int change_UmReal = 1;
     int HowManyUmRealUsed = 0;
     float UmReal = cents;
-    while (UmReal > 0)
+    while (UmReal >= 1)
     {
         UmReal = cents - (change_UmReal * 1);
         cents = cents - (change_UmReal * 1);
@@ -243,7 +243,7 @@ int calculate_Fiftycents(float cents, int HowManyUmRealUsed)
     int change_Fiftycents = 1;
     int HowManyFiftycentsUsed = 0;
     float Fiftycents = cents1;
-    while (Fiftycents > 0)
+    while (Fiftycents >= 0.50)
     {
         Fiftycents = cents1 - (change_Fiftycents * 0.50);
         cents1 = cents1 - (change_Fiftycents * 0.50);
@@ -259,7 +259,7 @@ int calculate_quarters(float cents, int HowManyUmRealUsed, int HowManyFiftycents
     int change_quarters = 1;
     int HowManyQuartersUsed = 0;
     float quarters = cents1;
-    while (quarters > 0)
+    while (quarters >= 0.25)
     {
         quarters = cents1 - (change_quarters * 0.25);
         cents1 = cents1 - (change_quarters * 0.25);
@@ -275,7 +275,7 @@ int calculate_dimes(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUse
     float dimes = cents1;
     int change_dimes = 1;
     int HowManyDimesUsed = 0;
-    while (dimes > 0)
+    while (dimes >= 0.10)
     {
         dimes = cents1 - (change_dimes * 0.10);
         cents1 = cents1 - (change_dimes * 0.10);
@@ -291,7 +291,7 @@ int calculate_nickels(float cents, int HowManyUmRealUsed, int HowManyFiftycentsU
     float nickels = cents2;
     int change_nickels = 1;
     int HowManyNickelsUsed = 0;
-    while (nickels > 0)
+    while (nickels >= 0.05)
     {
         nickels = cents2 - (change_nickels * 0.05);
         cents2 = cents2 - (change_nickels * 0.05);
