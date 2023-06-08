@@ -20,7 +20,7 @@ int main(void)
 {
     // Ask how many cents the customer is owed
     float charge = get_charge();
-    printf("Troco: %.2f\n", charge);
+    //printf("Troco: %.2f\n", charge);
 
     int notas_100 = calculate_notas_100(charge);
     printf("Notas 100 = %i\n", notas_100);
@@ -34,8 +34,7 @@ int main(void)
     printf("Notas 5 = %i\n", notas_5);
     int notas_2 = calculate_notas_2(charge, notas_100, notas_50, notas_25, notas_10, notas_5);
     printf("Notas 2 = %i\n", notas_2);
-    int cents = soma_notas(charge, notas_100, notas_50, notas_25, notas_10, notas_5, notas_2);
-    printf("Centavos = %i\n", cents);
+    float cents = soma_notas(charge, notas_100, notas_50, notas_25, notas_10, notas_5, notas_2);
     int UmReal = calculate_UmReal(cents);
     printf("Moedas de 1 Real = %i\n", UmReal);
     int FiftyCents = calculate_Fiftycents(cents, UmReal);
