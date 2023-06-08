@@ -34,13 +34,17 @@ int main(void)
 }
 float get_charge(void)
 {
-    float cents;
+    float Valor_Venda;
+    float Valor_Pagamento;
+    float troco;
     do
     {
-        cents = get_float("Change owed: ");
+        Valor_Venda = get_float("Valor da Venda: ");
+        Valor_Pagamento = get_float("Valor do Pagamento: ");
+        troco = Valor_Pagamento - Valor_Venda;
     }
-    while (cents < 0);
-    return cents;
+    while (troco < 0);
+    return troco;
 }
 
 int calculate_notas_100(int charge)
@@ -60,7 +64,7 @@ int calculate_notas_100(int charge)
 
 int calculate_notas_50(int charge, int HowManyNotas100Used)
 {
-    charge1 = charge - HowManyNotas100Used * 100;
+    int charge1 = charge - HowManyNotas100Used * 100;
     int change_notas_50 = 1;
     int HowManyNotas50Used = 0;
     int Notas_50 = charge1;
