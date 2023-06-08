@@ -35,24 +35,7 @@ void PrintXadrez(int tamanho)
             {
                 printf("*");
             }
-
         }
-
-
         printf("\n");
     }
 }
-      //do
-      //  {
-      //      if (i % 2 == 0)
-      //      {
-      //          printf("*#");
-      //          j++;
-      //      }
-      //      else
-      //      {
-      //           printf("#*");
-      //          j++;
-      //      }
-      //  }
-      //  while (j < tamanho/2);
