@@ -227,7 +227,7 @@ int calculate_UmReal(float cents)
     int change_UmReal = 1;
     int HowManyUmRealUsed = 0;
     float UmReal = cents;
-    while (UmReal > 0)
+    while (UmReal >= 1)
     {
         UmReal = cents - (change_UmReal * 1);
         cents = cents - (change_UmReal * 1);
@@ -243,7 +243,7 @@ int calculate_Fiftycents(float cents, int HowManyUmRealUsed)
     int change_Fiftycents = 1;
     int HowManyFiftycentsUsed = 0;
     float Fiftycents = cents1;
-    while (Fiftycents > 0)
+    while (Fiftycents >= 0.50)
     {
         Fiftycents = cents1 - (change_Fiftycents * 0.50);
         cents1 = cents1 - (change_Fiftycents * 0.50);
@@ -259,7 +259,7 @@ int calculate_quarters(float cents, int HowManyUmRealUsed, int HowManyFiftycents
     int change_quarters = 1;
     int HowManyQuartersUsed = 0;
     float quarters = cents1;
-    while (quarters > 0)
+    while (quarters >= 0.25)
     {
         quarters = cents1 - (change_quarters * 0.25);
         cents1 = cents1 - (change_quarters * 0.25);
@@ -275,7 +275,7 @@ int calculate_dimes(float cents, int HowManyUmRealUsed, int HowManyFiftycentsUse
     float dimes = cents1;
     int change_dimes = 1;
     int HowManyDimesUsed = 0;
-    while (dimes > 0)
+    while (dimes >= 0.10)
     {
         dimes = cents1 - (change_dimes * 0.10);
         cents1 = cents1 - (change_dimes * 0.10);
@@ -291,7 +291,7 @@ int calculate_nickels(float cents, int HowManyUmRealUsed, int HowManyFiftycentsU
     float nickels = cents2;
     int change_nickels = 1;
     int HowManyNickelsUsed = 0;
-    while (nickels > 0)
+    while (nickels >= 0.05)
     {
         nickels = cents2 - (change_nickels * 0.05);
         cents2 = cents2 - (change_nickels * 0.05);
