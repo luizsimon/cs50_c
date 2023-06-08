@@ -168,9 +168,9 @@ int calculate_notas_20(float charge, int HowManyNotas100Used, int HowManyNotas50
     return HowManyNotas20Used;
 }
 
-int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas25Used)
+int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used)
 {
-    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas25Used * 25;
+    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20;
     int change_notas_10 = 1;
     int HowManyNotas10Used = 0;
     float Notas_10 = charge1;
@@ -184,9 +184,9 @@ int calculate_notas_10(float charge, int HowManyNotas100Used, int HowManyNotas50
     return HowManyNotas10Used;
 }
 
-int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas25Used, int HowManyNotas10Used)
+int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used)
 {
-    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas25Used * 25 - HowManyNotas10Used * 10;
+    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10;
     int change_notas_5 = 1;
     int HowManyNotas5Used = 0;
     float Notas_5 = charge1;
@@ -200,9 +200,9 @@ int calculate_notas_5(float charge, int HowManyNotas100Used, int HowManyNotas50U
     return HowManyNotas5Used;
 }
 
-int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas25Used, int HowManyNotas10Used, int HowManyNotas5Used)
+int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used)
 {
-    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas25Used * 25 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5;
+    float charge1 = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5;
     int change_notas_2 = 1;
     int HowManyNotas2Used = 0;
     float Notas_2 = charge1;
@@ -216,9 +216,9 @@ int calculate_notas_2(float charge, int HowManyNotas100Used, int HowManyNotas50U
     return HowManyNotas2Used;
 }
 
-float soma_notas (float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas25Used, int HowManyNotas10Used, int HowManyNotas5Used, int HowManyNotas2Used)
+float soma_notas (float charge, int HowManyNotas100Used, int HowManyNotas50Used, int HowManyNotas20Used, int HowManyNotas10Used, int HowManyNotas5Used, int HowManyNotas2Used)
 {
-    float cents = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas25Used * 25 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5 - HowManyNotas2Used * 2;
+    float cents = charge - HowManyNotas100Used * 100 - HowManyNotas50Used * 50 - HowManyNotas20Used * 20 - HowManyNotas10Used * 10 - HowManyNotas5Used * 5 - HowManyNotas2Used * 2;
     return cents;
 }
 
