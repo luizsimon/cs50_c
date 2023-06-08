@@ -21,34 +21,74 @@ int main(void)
     // Ask how many cents the customer is owed
     float charge = get_charge();
     //printf("Troco: %.2f\n", charge);
+    printf("\n");
 
     int notas_100 = calculate_notas_100(charge);
-    printf("Notas 100 = %i\n", notas_100);
     int notas_50 = calculate_notas_50(charge, notas_100);
-    printf("Notas 50 = %i\n", notas_50);
     int notas_25 = calculate_notas_25(charge, notas_100, notas_50);
-    printf("Notas 25 = %i\n", notas_25);
     int notas_10 = calculate_notas_10(charge, notas_100, notas_50, notas_25);
-    printf("Notas 10 = %i\n", notas_10);
     int notas_5 = calculate_notas_5(charge, notas_100, notas_50, notas_25, notas_10);
-    printf("Notas 5 = %i\n", notas_5);
     int notas_2 = calculate_notas_2(charge, notas_100, notas_50, notas_25, notas_10, notas_5);
-    printf("Notas 2 = %i\n", notas_2);
     float cents = soma_notas(charge, notas_100, notas_50, notas_25, notas_10, notas_5, notas_2);
     int UmReal = calculate_UmReal(cents);
-    printf("Moedas de 1 Real = %i\n", UmReal);
     int FiftyCents = calculate_Fiftycents(cents, UmReal);
-    printf("Moedas de 50 centavos = %i\n", FiftyCents);
     int quarters = calculate_quarters(cents, UmReal, FiftyCents);
-    printf("Moedas de 25 centavos = %i\n", quarters);
     int dimes = calculate_dimes(cents, UmReal, FiftyCents, quarters);
-    printf("Moedas de 10 centavos = %i\n", dimes);
     int nickels = calculate_nickels(cents, UmReal, FiftyCents, quarters, dimes);
-    printf("Moedas de 5 centavos = %i\n", nickels);
     int pennies = calculate_pennies(cents, UmReal, FiftyCents, quarters, dimes, nickels);
-    printf("Moedas de 1 centavo = %i\n", pennies);
 
+    if (notas_100 != 0)
+    {
+        printf("Notas 100 = %i\n", notas_100);
 
+    }
+    if (notas_50 != 0)
+    {
+        printf("Notas 50 = %i\n", notas_50);
+
+    }
+    if (notas_25 != 0)
+    {
+        printf("Notas 25 = %i\n", notas_25);
+    }
+    if (notas_10 != 0)
+    {
+        printf("Notas 10 = %i\n", notas_10);
+
+    }
+    if (notas_5 != 0)
+    {
+        printf("Notas 5 = %i\n", notas_5);
+    }
+    if (notas_2 != 0)
+    {
+        printf("Notas 2 = %i\n", notas_2);
+    }
+    if (UmReal != 0)
+    {
+        printf("Moedas de 1 Real = %i\n", UmReal);
+    }
+    if (FiftyCents != 0)
+    {
+        printf("Moedas de 50 centavos = %i\n", FiftyCents);
+    }
+    if (quarters != 0)
+    {
+        printf("Moedas de 25 centavos = %i\n", quarters);
+    }
+    if (dimes != 0)
+    {
+        printf("Moedas de 10 centavos = %i\n", dimes);
+    }
+    if (nickels != 0)
+    {
+        printf("Moedas de 5 centavos = %i\n", nickels);
+    }
+    if (pennies != 0)
+    {
+        printf("Moedas de 1 centavo = %i\n", pennies);
+
+    }
 
     // Calculate the number of quarters to give the customer
 
