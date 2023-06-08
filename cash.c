@@ -47,7 +47,7 @@ int calculate_quarters(int cents)
     int change_quarters = 1;
     int HowManyQuartersUsed = 0;
     int quarters = cents;
-    while (quarters > 25)
+    while (quarters >= 25)
     {
         quarters = cents - (change_quarters * 25);
         cents = cents - (change_quarters * 25);
@@ -63,7 +63,7 @@ int calculate_dimes(int cents, int HowManyQuartersUsed)
     int dimes = cents1;
     int change_dimes = 1;
     int HowManyDimesUsed = 0;
-    while (dimes > 10)
+    while (dimes >= 10)
     {
         dimes = cents1 - (change_dimes * 10);
         cents1 = cents1 - (change_dimes * 10);
@@ -79,7 +79,7 @@ int calculate_nickels(int cents, int HowManyDimesUsed, int HowManyQuartersUsed)
     int nickels = cents2;
     int change_nickels = 1;
     int HowManyNickelsUsed = 0;
-    while (nickels > 5)
+    while (nickels >= 5)
     {
         nickels = cents2 - (change_nickels * 5);
         cents2 = cents2 - (change_nickels * 5);
@@ -94,7 +94,7 @@ int calculate_pennies(int cents, int HowManyDimesUsed, int HowManyQuartersUsed, 
     int pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
-    while (pennies > 0)
+    while (pennies >= 1)
     {
         pennies = cents3 - (change_pennies * 1);
         cents3 = cents3 - (change_pennies * 1);
