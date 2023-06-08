@@ -47,7 +47,7 @@ int main(void)
         printf("Notas 50 = %i\n", notas_50);
 
     }
-    if (notas_25 != 0)
+    if (notas_20 != 0)
     {
         printf("Notas 25 = %i\n", notas_25);
     }
@@ -86,7 +86,7 @@ int main(void)
     }
     if (pennies != 0)
     {
-        printf("Moedas de 1 centavo = %i\n", pennies);
+        //printf("Moedas de 1 centavo = %i\n", pennies);
 
     }
 
@@ -306,7 +306,7 @@ int calculate_pennies(float cents, int HowManyUmRealUsed, int HowManyFiftycentsU
     float pennies = cents3;
     int change_pennies = 1;
     int HowManyPenniesUsed = 0;
-    while (pennies >= 0.01)
+    while (pennies > 0)
     {
         pennies = cents3 - (change_pennies * 0.01);
         cents3 = cents3 - (change_pennies * 0.01);
