@@ -58,6 +58,22 @@ int calculate_notas_100(int charge)
     return HowManyNotas100Used;
 }
 
+int calculate_notas_50(int charge, int HowManyNotas100Used)
+{
+    charge1 = charge - HowManyNotas100Used * 100;
+    int change_notas_50 = 1;
+    int HowManyNotas50Used = 0;
+    int Notas_50 = charge1;
+    while (Notas_50 >= 50)
+    {
+        Notas_50 = charge1 - (change_notas_50 * 50);
+        charge1 = charge1 - (change_notas_50 * 50);
+        HowManyNotas50Used = HowManyNotas50Used + change_notas_50;
+    }
+
+    return HowManyNotas50Used;
+}
+
 int calculate_quarters(int charge)
 {
     int change_quarters = 1;
