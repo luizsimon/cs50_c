@@ -3,5 +3,14 @@
 
 int main(void)
 {
-    return 0;
+   int i = 0;
+   while (true)
+   {
+        i++;
+        int x = get_int ("Fala um numero ai: ");
+        printf("%i\n", i);
+   }
+
+   int x = get_int ("Fala um numero ai: ");
+   printf("%i\n", i);
 }
