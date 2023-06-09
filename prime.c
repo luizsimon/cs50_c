@@ -28,14 +28,14 @@ int main(void)
 
         }
         // RECEBE A INFO DO ISPRIME E VÊ SE É FALSE OU TRUE, SE FOR FALSE SIGNIFICA QUE É PRIMO E PRINTA NA TELA
-        else if (IsPrime(i, maximum))
+        else //if (IsPrime(i, maximum))
         {
-
+            IsPrime(i , maximum) ?  : printf("%i\n", i);
         }
-        else
-        {
-            printf("%i\n", i);
-        }
+        //else
+        //{
+        //    printf("%i\n", i);
+        //}
     }
 }
 
