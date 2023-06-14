@@ -19,5 +19,5 @@ int main(void)
     {
         salarioReajustado = 1.1 * salario;
     }
-    printf("Salario Reajustado igual a %.2f\n", salarioReajustado);
+    printf("Salario Reajustado igual a %.0f\n", salarioReajustado);
 }
