@@ -13,7 +13,7 @@ int main(void)
 
     float media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-    if (media >= 7 && frequencia >= 75)
+    if (media >= 7 || frequencia >= 75)
     {
         printf("%s foi aprovado!\n", nome);
     }
