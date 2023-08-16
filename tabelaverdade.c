@@ -18,6 +18,9 @@ int Entradas(void)
 
 void TabelaVerdade(int entradas, int linhas)
 {
-    
+    for(int i = 0; i < entradas; i++)
+    {
+        
+    }
 }
 
