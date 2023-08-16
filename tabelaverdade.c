@@ -13,18 +13,18 @@ int main(void)
 
 void TabelaVerdade(int entradas, int linhas)
 {
-    printf ("\n");
-    printf ("A B C D E F");
-    printf ("\n");
+    printf("\n");
+    printf("A B C D E F");
+    printf("\n");
     int j = linhas;
-    while (j > 0)                       // aqui o i = a posicao do numero e o j = a linha
+    while (j > 0)
     {
         int i = entradas;
 
         while (i > 0)
         {
             int x = pow(2, i);
-            int y = pow(2, i-1);
+            int y = pow(2, i - 1);
             if ((j % x) == 0 || (j % x) > y)
             {
                 printf("0 ");
@@ -38,5 +38,5 @@ void TabelaVerdade(int entradas, int linhas)
         printf("\n");
         j--;
     }
-    printf ("\n");
+    printf("\n");
 }
