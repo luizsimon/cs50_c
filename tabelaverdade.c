@@ -29,7 +29,8 @@ void TabelaVerdade(int entradas, int linhas)
     // }
 
     int j = 0;
-    do
+
+    while (j < 5)
     {
         int i = entradas;
         while (i > 0)
@@ -40,5 +41,5 @@ void TabelaVerdade(int entradas, int linhas)
         printf("\n");
         j++;
     }
-    while (j < 5)
+
 }
