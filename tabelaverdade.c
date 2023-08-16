@@ -35,8 +35,8 @@ void TabelaVerdade(int entradas, int linhas)
         int i = entradas;
         while (i > 0)
         {
-            if ( )
-            printf("A ");
+            printf("0 ");
+            if 
             i--;
         }
         printf("\n");
