@@ -32,7 +32,7 @@ void TabelaVerdade(int entradas, int linhas)
     int j, k;
     do
     {
-        
+         printf("0\n");
     }
     while (k < linhas)
 }
