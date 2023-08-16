@@ -28,13 +28,14 @@ void TabelaVerdade(int entradas, int linhas)
 
     // }
 
-    int j = 0;
+    int j = 1;
 
-    while (j < 5)
+    while (j < linhas)
     {
         int i = entradas;
         while (i > 0)
         {
+            if ( )
             printf("A ");
             i--;
         }
