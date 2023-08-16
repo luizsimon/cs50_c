@@ -28,19 +28,25 @@ void TabelaVerdade(int entradas, int linhas)
 
     // }
 
-    int j = 1;
+    int j = linhas;
 
-    while (j < linhas)
+    while (j > 1)                       // aqui o i = a posicao do numero e o j = a linha
     {
         int i = entradas;
         while (i > 0)
         {
-            printf("0 ");
-            if 
+            if (j % pow(2, i) <= pow(2, i-1))
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
             i--;
         }
         printf("\n");
-        j++;
+        j--;
     }
 
 }
