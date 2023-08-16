@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <cs50.h>
 #include <math.h>
+#include <stdio.h>
 
 void TabelaVerdade(int entradas, int linhas);
 
@@ -28,15 +28,17 @@ void TabelaVerdade(int entradas, int linhas)
 
     // }
 
-    int i = entradas;
-    int j, k;
+    int j = 0;
     do
     {
-         while ()
-         {
-            
-         }
+        int i = entradas;
+        while (i > 0)
+        {
+            printf("A ");
+            i--;
+        }
+        printf("\n");
+        j++;
     }
-    while (k < linhas)
+    while (j < 5)
 }
-
