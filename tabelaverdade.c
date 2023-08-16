@@ -2,25 +2,30 @@
 #include <cs50.h>
 #include <math.h>
 
-int Entradas(void);
+void TabelaVerdade(int entradas, int linhas);
 
 int main(void)
 {
-    Entradas();
-}
-
-int Entradas(void)
-{
     int entradas = get_int("Qual o número de entradas? ");
     int linhas = pow(2, entradas);
-    return entradas ; linhas;
+    TabelaVerdade(entradas, linhas);
 }
 
 void TabelaVerdade(int entradas, int linhas)
 {
-    for(int i = 0; i < entradas; i++)
+    for(int i = 0; i < linhas; i++)
     {
-        
+        if (i % 2 == 0)
+        {
+            printf("0\n");
+        }
+        else
+        {
+           printf("1\n");
+        }
+
+        for ()
+
     }
 }
 
