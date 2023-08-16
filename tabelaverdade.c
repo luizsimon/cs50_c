@@ -18,6 +18,6 @@ int Entradas(void)
 
 void TabelaVerdade(int entradas, int linhas)
 {
-    
+
 }
 
