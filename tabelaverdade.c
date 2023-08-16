@@ -12,13 +12,12 @@ int main(void)
 int Entradas(void)
 {
     int entradas = get_int("Qual o número de entradas? ");
-    int linhas = 2^entradas;
-    printf("Linhas = %i", linhas);
+    int linhas = pow(2, entradas);
     return entradas ; linhas;
 }
 
-// void TabelaVerdade(int entradas, int linhas)
-// {
-
-// }
+void TabelaVerdade(int entradas, int linhas)
+{
+    
+}
 
