@@ -29,11 +29,18 @@ void TabelaVerdade(int entradas, int linhas)
     // }
 
     printf ("\n");
-    int j = linhas;
 
+    for (int k = entradas; k > 0; k--)
+    {
+        
+    }
+
+
+    int j = linhas;
     while (j > 0)                       // aqui o i = a posicao do numero e o j = a linha
     {
         int i = entradas;
+
         while (i > 0)
         {
             int x = pow(2, i);
