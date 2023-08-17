@@ -19,10 +19,10 @@ void TabelaVerdade(int entradas, int linhas)
     printf ("A B C D E F");
     printf ("\n");
     int j = linhas;
-    int i = entradas;
-    
     while (j > 0)                       // aqui o i = a posicao do numero e o j = a linha
     {
+        int i = entradas;
+
         while (i > 0)
         {
             int x = pow(2, i);
