@@ -15,11 +15,16 @@ int main(void)
 
 void TabelaVerdade(int entradas, int linhas)
 {
-    for ()
+    char CabecalhoColuna = 'A';
+
+    for (int i = 0; i < entradas; i++)
+    {
+        printf("%c ", CabecalhoColuna++);
+    }
 
     printf ("\n");
-    printf ("A B C D E F");
-    printf ("\n");
+    // printf ("A B C D E F");
+    // printf ("\n");
     int j = linhas;
     while (j > 0)                       // aqui o i = a posicao do numero e o j = a linha
     {
