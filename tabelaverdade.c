@@ -19,10 +19,18 @@ void TabelaVerdade(int entradas, int linhas)
 
     for (int i = 0; i < entradas; i++)
     {
-        printf("%c ", CabecalhoColuna++);
+        printf("%c|", CabecalhoColuna++);
     }
 
     printf ("\n");
+
+    // for (int i = 0; i < entradas; i++)
+    // {
+    //     printf("-|");
+    // }
+
+    // printf ("\n");
+
     // printf ("A B C D E F");
     // printf ("\n");
     int j = linhas;
@@ -37,11 +45,11 @@ void TabelaVerdade(int entradas, int linhas)
             // no if, verica se a linha (j) dividida por 2^i (posição) é 0 ou é maior que 2^(i-1)
             if ((j % x) == 0 || (j % x) > y)
             {
-                printf("0 ");
+                printf("0|");
             }
             else
             {
-                printf("1 ");
+                printf("1|");
             }
             i--;
         }
