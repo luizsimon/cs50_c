@@ -15,6 +15,8 @@ int main(void)
 
 void TabelaVerdade(int entradas, int linhas)
 {
+    for ()
+
     printf ("\n");
     printf ("A B C D E F");
     printf ("\n");
