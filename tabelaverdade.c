@@ -35,6 +35,7 @@ void TabelaVerdade(int entradas, int linhas)
 
     // printf ("A B C D E F");
     // printf ("\n");
+    
     int j = linhas;
     while (j > 0)                       // aqui o i = a posicao do numero e o j = a linha
     {
